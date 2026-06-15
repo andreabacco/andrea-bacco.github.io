@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Andrea Bacconi · Somatic Coach · Lausanne</title>
-<meta name="description" content="Somatic coaching and nervous system regulation. Come back to yourself through movement, sound, and voice. 1:1 sessions, workshops, and women's circles.">
+<meta name="description" content="Somatic coaching and nervous system regulation in Lausanne. Come back to yourself through movement, sound, and voice. 1:1 sessions, workshops, and women's circles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -46,18 +46,31 @@
     overflow: hidden;
   }
 
-  /* the apple-tree signature: a slow-breathing circle, the essence that is already whole */
-  .essence {
-    width: 132px;
-    height: 132px;
-    margin-bottom: 44px;
-    position: relative;
-    animation: breathe 7s ease-in-out infinite;
+  /* hero portrait */
+  .hero-photo {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center 28%;
+    border-radius: 140px / 160px;
+    margin-bottom: 30px;
+    box-shadow: 0 14px 40px rgba(62,47,78,0.16);
   }
-  .essence svg { width: 100%; height: 100%; display: block; overflow: visible; }
-  @keyframes breathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.045); }
+
+  .name-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    color: var(--violet);
+    margin-bottom: 4px;
+  }
+  .role-mark {
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 30px;
   }
 
   .hero h1 {
@@ -215,7 +228,6 @@
   .reveal.in { opacity: 1; transform: none; }
 
   @media (prefers-reduced-motion: reduce) {
-    .essence { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
     html { scroll-behavior: auto; }
   }
@@ -235,13 +247,9 @@
 <body>
 
   <header class="hero">
-    <div class="essence" aria-hidden="true">
-      <svg viewBox="0 0 132 132" fill="none">
-        <circle cx="66" cy="66" r="62" stroke="#BFA06A" stroke-width="1" opacity="0.55"/>
-        <circle cx="66" cy="66" r="46" stroke="#BFA06A" stroke-width="1" opacity="0.7"/>
-        <circle cx="66" cy="66" r="6" fill="#BFA06A"/>
-      </svg>
-    </div>
+    <img class="hero-photo" src="andrea.jpg" alt="Andrea Bacconi in a somatic session" />
+    <p class="name-mark">Andrea Bacconi</p>
+    <p class="role-mark">Somatic Coaching</p>
     <h1>Come back to<br><em>yourself</em></h1>
     <p class="sub">Somatic coaching and nervous system regulation in Lausanne. Working with the body through breath, touch, movement, and sound.</p>
     <span class="scroll-hint">Scroll</span>
