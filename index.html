@@ -185,6 +185,12 @@
     display: block;
     box-shadow: 0 14px 34px rgba(62,47,78,0.14);
   }
+  .collage { position: relative; margin: 0 0 40px; padding-bottom: 70px; }
+  .collage .main { width: 82%; aspect-ratio: 16 / 8.5; object-fit: cover; object-position: center 60%;
+    border-radius: 6px; display: block; box-shadow: 0 14px 34px rgba(62,47,78,0.14); }
+  .collage .inset { position: absolute; right: 0; bottom: 0; width: 38%; aspect-ratio: 4 / 3; object-fit: cover;
+    border: 6px solid var(--cream); border-radius: 6px; box-shadow: 0 16px 36px rgba(62,47,78,0.22); }
+  .collage .photo-caption { text-align: left; width: 58%; }
   .photo-caption {
     margin-top: 10px;
     font-size: 0.76rem;
@@ -358,6 +364,10 @@
     .media-grid.reverse .arch-photo { order: 0; }
     .yoga-photo, .arch-photo { max-width: 260px; margin: 0 auto; display: block; }
     .wide-photo img { aspect-ratio: 4 / 3; }
+    .collage { padding-bottom: 0; }
+    .collage .main { width: 100%; aspect-ratio: 4 / 3; }
+    .collage .inset { position: relative; display: block; width: 70%; margin: -50px 0 0 auto; }
+    .collage .photo-caption { width: 100%; }
   }
 
   @media (max-width: 520px) {
@@ -409,7 +419,7 @@
       <p class="lede en">We've spent so long focusing on what to do, that we've forgotten who we are.</p>
       <p class="lede fr">Nous avons passé tant de temps à nous demander quoi faire que nous avons oublié qui nous sommes.</p>
       <div class="media-grid reverse">
-        <img class="arch-photo" src="embodiment.JPG" alt="Andrea Bacconi in nature, hands resting on her chest" loading="lazy" />
+        <img class="arch-photo" src="embodiment.jpg" alt="Andrea Bacconi in nature, hands resting on her chest" loading="lazy" />
         <div>
       <div class="prose en">
         <p>Reconnecting with the body lets us recover an inner wisdom that the overactive mind so often clouds over. Together we can slow down and listen more deeply.</p>
@@ -460,7 +470,7 @@
       <p class="lede en">A particular attention, for <em>those who want it</em>.</p>
       <p class="lede fr">Une attention particulière, pour <em>celles qui le souhaitent</em>.</p>
       <div class="media-grid">
-        <img class="arch-photo" src="women.JPG" alt="Portrait of Andrea Bacconi with a red scarf" loading="lazy" style="object-position:center 30%;" />
+        <img class="arch-photo" src="women.jpg" alt="Portrait of Andrea Bacconi with a red scarf" loading="lazy" style="object-position:center 30%;" />
         <div>
       <div class="prose en">
         <p>Much of what women carry in the body was never theirs to begin with. Conditioning about how much space to take, what is safe to feel, how the body should look and behave, what desire is allowed to be.</p>
@@ -479,8 +489,9 @@
     <div class="wrap"><hr class="divider"></div>
 
     <section class="wrap reveal">
-      <figure class="wide-photo">
-        <img src="circle.jpg" alt="Andrea guiding the closing ceremony of the ALPS Summer School 2026, a circle of participants outdoors above the lake" loading="lazy" />
+      <figure class="collage">
+        <img class="main" src="circle.jpg" alt="Andrea guiding the closing ceremony of the ALPS Summer School 2026, a circle of participants outdoors above the lake" loading="lazy" />
+        <img class="inset" src="facilitating.jpg" alt="Andrea facilitating a group outdoors, in front of a garden" loading="lazy" />
         <figcaption class="photo-caption en">Guiding the closing ceremony of the ALPS Summer School 2026</figcaption>
         <figcaption class="photo-caption fr">Cérémonie de clôture de la Summer School ALPS 2026</figcaption>
       </figure>
