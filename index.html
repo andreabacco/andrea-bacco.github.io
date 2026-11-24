@@ -3,647 +3,360 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrea Bacconi · Somatic Coach &amp; Yoga Teacher · Lausanne</title>
-<meta name="description" content="Somatic coaching for stress and anxiety, Somatic Flow yoga and nervous system regulation in Lausanne. Come back to yourself through breath, touch, movement, and sound. 1:1 sessions, yoga classes, workshops, and somatic work with women.">
+<title>Andrea Bacconi | Somatic coach and yoga teacher in Lausanne</title>
+<meta name="description" content="Somatic coaching for stress and anxiety, Somatic Flow yoga, women's circles and workshops in Lausanne. Andrea Bacconi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #FAF6F1;
-    --cream-deep: #F2EAE0;
-    --violet: #3E2F4E;
-    --violet-soft: #5C4A6E;
-    --gold: #BFA06A;
-    --gold-deep: #A88A52;
+    --bg: #F6F3EE;
+    --ink: #26222B;
+    --body: #4A4450;
+    --muted: #6B6470;
+    --rule: #D8D1C7;
+    --accent: #8E3B2E;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Public Sans', Arial, sans-serif;
   }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
+  * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: var(--ink); }
+  a:hover { color: var(--accent); }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
 
-  body {
-    background: var(--cream);
-    color: var(--violet);
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ---- Language switch ---- */
   body.fr .en { display: none !important; }
   body:not(.fr) .fr { display: none !important; }
 
-  .lang-switch {
-    position: fixed;
-    top: 18px;
-    right: 20px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    background: rgba(250,246,241,0.88);
-    backdrop-filter: blur(6px);
-    border: 1px solid rgba(62,47,78,0.14);
-    border-radius: 40px;
-    padding: 4px;
-  }
-  .lang-switch button {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    font-weight: 400;
-    color: var(--violet-soft);
-    background: transparent;
-    border: 0;
-    border-radius: 40px;
-    padding: 6px 12px;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
-  }
-  .lang-switch button[aria-pressed="true"] { background: var(--violet); color: var(--cream); }
-  .lang-switch button:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+  /* header */
+  header { border-bottom: 1px solid var(--ink); }
+  .bar { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; gap: 20px; flex-wrap: wrap; }
+  .logo { font-family: var(--serif); font-size: 22px; text-decoration: none; }
+  nav { display: flex; gap: 26px; align-items: center; flex-wrap: wrap; font-size: 15px; }
+  nav a { text-decoration: none; }
+  .lang { display: flex; gap: 4px; color: var(--muted); }
+  .lang button { background: none; border: 0; font: inherit; font-size: 14px; color: var(--muted); cursor: pointer; padding: 4px 2px; }
+  .lang button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 28px; }
+  /* shared */
+  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; }
+  section.block { border-top: 1px solid var(--ink); padding-top: 44px; padding-bottom: 80px; }
+  h2 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.2; margin: 0 0 24px; grid-column: span 3; }
+  .side-content { grid-column: 5 / span 8; }
+  .btn { display: inline-block; background: var(--ink); color: var(--bg); text-decoration: none; padding: 15px 24px; font-size: 15px; font-weight: 500; }
+  .btn:hover { background: var(--accent); color: var(--bg); }
+  .btn-line { display: inline-block; padding: 14px 22px; border: 1px solid var(--ink); text-decoration: none; font-size: 15px; }
+  .actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+  .caption { font-size: 13px; color: var(--muted); margin-top: 8px; }
 
-  /* ---- Hero ---- */
-  .hero {
-    min-height: 92vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    padding: 80px 28px 110px;
-    overflow: hidden;
-  }
+  /* hero */
+  .hero { padding-top: 72px; padding-bottom: 88px; align-items: end; }
+  .hero-text { grid-column: span 7; padding-bottom: 8px; }
+  .hero-label { margin: 0 0 26px; font-size: 15px; color: var(--muted); }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(52px, 8vw, 88px); line-height: 1; letter-spacing: -0.02em; margin: 0 0 30px; }
+  .hero-sub { margin: 0 0 38px; max-width: 540px; font-size: 19px; color: var(--body); }
+  .hero-photo { grid-column: 9 / span 4; }
+  .hero-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 
-  /* hero portrait */
-  .hero-photo {
-    width: 210px;
-    height: 210px;
-    object-fit: cover;
-    object-position: center 38%;
-    border-radius: 50%;
-    margin-bottom: 32px;
-    box-shadow: 0 14px 38px rgba(62,47,78,0.18);
-  }
+  /* who */
+  .story { font-family: var(--serif); font-size: 20px; line-height: 1.7; }
+  .story p { margin: 0 0 20px; }
+  .signature { font-family: 'Caveat', cursive; font-size: 44px; color: var(--accent); line-height: 1.1; margin: 4px 0 0; }
 
-  .name-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    letter-spacing: 0.04em;
-    color: var(--violet);
-    margin-bottom: 26px;
-  }
-
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: clamp(2.9rem, 8vw, 4.4rem);
-    line-height: 1.05;
-    letter-spacing: 0.01em;
-    margin-bottom: 22px;
-  }
-  .hero h1 em { font-style: italic; color: var(--gold-deep); }
-
-  .hero .sub {
-    font-size: 1.02rem;
-    font-weight: 300;
-    color: var(--violet-soft);
-    max-width: 460px;
-    letter-spacing: 0.015em;
-  }
-
-
-  .hero-cta { margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
-  .hero-cta .link-btn { min-width: 280px; }
-  .hero-cta .soft-link {
-    font-size: 0.84rem;
-    letter-spacing: 0.03em;
-    color: var(--violet-soft);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(191,160,106,0.5);
-    padding-bottom: 1px;
-  }
-  .hero-cta .soft-link:hover { color: var(--gold-deep); }
-
-  .scroll-hint {
-    position: absolute;
-    bottom: 30px;
-    font-size: 0.72rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    opacity: 0.8;
-  }
-
-  /* ---- Sections ---- */
-  section, section.wrap { padding-top: 72px; padding-bottom: 72px; }
-
-  .eyebrow {
-    font-size: 0.72rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold-deep);
-    margin-bottom: 26px;
-    display: block;
-  }
-
-  .lede {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: clamp(1.6rem, 4.4vw, 2.15rem);
-    line-height: 1.35;
-    color: var(--violet);
-  }
-  .lede em { font-style: italic; color: var(--gold-deep); }
-
-  .prose p { margin-top: 1.3em; color: var(--violet-soft); max-width: 56ch; }
-  .prose p:first-child { margin-top: 0; }
-
-  .divider {
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(191,160,106,0.45), transparent);
-    border: 0;
-  }
-
-  /* ---- Photo + text blocks ---- */
-  .media-grid.reverse { grid-template-columns: 1fr 220px; }
-  .media-grid.reverse .arch-photo { order: 2; }
-  .wide-photo { margin: 0 0 40px; }
-  .wide-photo img {
-    width: 100%;
-    aspect-ratio: 16 / 8;
-    object-fit: cover;
-    object-position: center 60%;
-    border-radius: 6px;
-    display: block;
-    box-shadow: 0 14px 34px rgba(62,47,78,0.14);
-  }
-  .photo-caption {
-    margin-top: 10px;
-    font-size: 0.76rem;
-    letter-spacing: 0.06em;
-    color: var(--gold-deep);
-    text-align: center;
-  }
-
-  /* ---- Yoga ---- */
-  .yoga-grid, .media-grid {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 40px;
-    align-items: start;
-    margin-top: 34px;
-  }
-  .yoga-photo, .arch-photo {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
-    object-position: center 30%;
-    border-radius: 120px 120px 6px 6px;
-    box-shadow: 0 14px 34px rgba(62,47,78,0.16);
-  }
-  .yoga-facts {
-    margin-top: 1.6em;
-    font-size: 0.86rem;
-    letter-spacing: 0.02em;
-    color: var(--gold-deep);
-  }
-
-  /* ---- Offerings ---- */
-  .offer {
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(62,47,78,0.1);
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 8px 24px;
-    align-items: baseline;
-  }
+  /* offers */
+  .offer { display: grid; grid-template-columns: 56px minmax(0, 1fr) 190px; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--rule); }
+  .offer:first-child { padding-top: 0; }
   .offer:last-child { border-bottom: 0; }
-  .offer h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 1.7rem;
-    letter-spacing: 0.01em;
-  }
-  .offer .price {
-    font-size: 0.82rem;
-    letter-spacing: 0.05em;
-    color: var(--gold-deep);
-    white-space: nowrap;
-  }
-  .offer p {
-    grid-column: 1 / -1;
-    color: var(--violet-soft);
-    font-size: 0.96rem;
-    max-width: 52ch;
-  }
+  .num { color: var(--accent); font-size: 14px; padding-top: 3px; }
+  .offer h3 { margin: 0 0 6px; font-size: 19px; font-weight: 500; }
+  .offer p { margin: 0 0 10px; color: var(--body); font-size: 16px; }
+  .meta { font-size: 14px; color: var(--muted); text-align: right; padding-top: 3px; }
+  .guide-box { margin-top: 16px; padding: 18px 20px; border: 1px solid var(--rule); background: #FBF9F5; }
+  .guide-box p { margin: 0 0 8px; font-size: 15px; }
 
-  /* ---- Testimonials ---- */
-  .quotes { display: grid; gap: 22px; margin-top: 10px; }
-  .quote {
-    background: var(--cream-deep);
-    border-radius: 4px;
-    padding: 30px 32px 24px;
-    position: relative;
-  }
-  .quote::before {
-    content: "\201C";
-    position: absolute;
-    top: 4px;
-    left: 18px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    line-height: 1;
-    color: var(--gold);
-    opacity: 0.55;
-  }
-  .quote blockquote {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.28rem;
-    line-height: 1.5;
-    color: var(--violet);
-    padding-left: 18px;
-  }
-  .quote figcaption {
-    margin-top: 14px;
-    padding-left: 18px;
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-    color: var(--gold-deep);
-  }
-  .quote figcaption .note { color: var(--violet-soft); opacity: 0.75; }
+  /* yoga */
+  .yoga-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 40%; }
+  .yoga-body { grid-column: 7 / span 6; }
+  .yoga-body p { margin: 0 0 18px; color: var(--body); }
+  .facts { font-size: 14px; color: var(--muted); }
 
-  /* ---- Links / CTA block ---- */
-  .connect { text-align: center; }
-  .connect .lede { margin-bottom: 38px; }
+  /* quotes */
+  .quote { padding: 0 0 28px; margin: 0 0 28px; border-bottom: 1px solid var(--rule); }
+  .quote:last-child { border-bottom: 0; margin-bottom: 0; }
+  .quote blockquote { margin: 0 0 10px; font-family: var(--serif); font-size: 20px; line-height: 1.6; }
+  .quote figcaption { font-size: 14px; color: var(--muted); }
 
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    max-width: 420px;
-    margin: 0 auto;
-  }
-  .link-btn {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 17px 24px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.03em;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-  }
-  .link-btn .ico { width: 19px; height: 19px; flex-shrink: 0; }
-  .link-btn .label { flex: 1; text-align: left; }
-  .link-btn .arrow { transition: transform 0.25s ease; }
-  .link-btn:hover { transform: translateY(-2px); }
-  .link-btn:hover .arrow { transform: translateX(4px); }
+  /* photo strip */
+  .strip { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 24px; padding-bottom: 80px; }
+  .strip img { width: 100%; height: 320px; object-fit: cover; }
+  .strip figure { margin: 0; }
 
-  .btn-primary {
-    background: var(--violet);
-    color: var(--cream);
-    box-shadow: 0 6px 22px rgba(62,47,78,0.18);
-  }
-  .btn-primary:hover { background: #34273f; }
-  .btn-gold {
-    background: var(--gold);
-    color: #fff;
-    box-shadow: 0 6px 20px rgba(191,160,106,0.28);
-  }
-  .btn-gold:hover { background: var(--gold-deep); }
-  .btn-outline {
-    background: transparent;
-    color: var(--violet);
-    border: 1px solid rgba(62,47,78,0.25);
-  }
-  .btn-outline:hover { border-color: var(--gold); color: var(--gold-deep); }
+  /* footer */
+  footer { border-top: 1px solid var(--ink); padding: 32px 0 48px; font-size: 14px; color: var(--muted); }
+  .foot { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .disclaimer { margin-top: 20px; font-size: 13px; }
 
-  /* ---- Footer ---- */
-  footer {
-    text-align: center;
-    padding: 50px 28px 60px;
-    color: var(--violet-soft);
+  @media (max-width: 820px) {
+    .wrap { padding: 0 22px; }
+    .hero { padding-top: 48px; padding-bottom: 64px; }
+    .hero-text, .hero-photo, h2, .side-content, .yoga-body, .yoga-photo { grid-column: 1 / -1; }
+    .hero-photo { margin-top: 40px; max-width: 420px; }
+    .yoga-photo { margin-bottom: 28px; max-width: 420px; }
+    .offer { grid-template-columns: 40px minmax(0, 1fr); }
+    .meta { grid-column: 2; text-align: left; padding-top: 0; }
+    .strip { grid-template-columns: 1fr; }
+    .strip img { height: 260px; }
+    nav { gap: 16px; font-size: 14px; }
+    .story { font-size: 18px; }
   }
-  .footer-mark {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.25rem;
-    color: var(--gold-deep);
-    margin-bottom: 14px;
-  }
-  .footer-text { font-size: 0.82rem; letter-spacing: 0.04em; line-height: 1.9; }
-  .footer-note { margin-top: 18px; font-size: 0.72rem; letter-spacing: 0.03em; opacity: 0.7; }
-
-  /* ---- Reveal on scroll ---- */
-  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.9s ease, transform 0.9s ease; }
-  .reveal.in { opacity: 1; transform: none; }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    html { scroll-behavior: auto; }
-  }
-
-  @media (max-width: 620px) {
-    .yoga-grid, .media-grid, .media-grid.reverse { grid-template-columns: 1fr; gap: 30px; }
-    .media-grid.reverse .arch-photo { order: 0; }
-    .yoga-photo, .arch-photo { max-width: 260px; margin: 0 auto; display: block; }
-    .wide-photo img { aspect-ratio: 4 / 3; }
-  }
-
-  @media (max-width: 520px) {
-    section, section.wrap { padding-top: 56px; padding-bottom: 56px; }
-    .offer { grid-template-columns: 1fr; }
-    .offer .price { white-space: normal; }
-    .quote { padding: 28px 22px 22px; }
-  }
-
-  a:focus-visible, .link-btn:focus-visible {
-    outline: 2px solid var(--gold-deep);
-    outline-offset: 3px;
-  }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 </style>
 </head>
 <body>
 
-  <div class="lang-switch" role="group" aria-label="Language / Langue">
-    <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-    <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Andrea Bacconi</a>
+    <nav aria-label="Main">
+      <a href="#who" class="en">Who I am</a><a href="#who" class="fr">Qui je suis</a>
+      <a href="#offer" class="en">What I offer</a><a href="#offer" class="fr">Ce que je propose</a>
+      <a href="#yoga">Yoga</a>
+      <a href="#contact">Contact</a>
+      <span class="lang" role="group" aria-label="Language / Langue">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="wrap grid hero">
+    <div class="hero-text">
+      <p class="hero-label en">Somatic coach and yoga teacher in Lausanne</p>
+      <p class="hero-label fr">Coach somatique et professeure de yoga à Lausanne</p>
+      <h1 class="en">Hi, I'm Andrea.</h1>
+      <h1 class="fr">Bonjour, je suis Andrea.</h1>
+      <p class="hero-sub en">I help people who feel stuck, stressed or anxious to slow down and listen to their body again.</p>
+      <p class="hero-sub fr">J'accompagne les personnes qui se sentent bloquées, stressées ou anxieuses à ralentir et à écouter à nouveau leur corps.</p>
+      <div class="actions">
+        <a class="btn" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener"><span class="en">Book a free intro call</span><span class="fr">Réserver un appel découverte gratuit</span></a>
+        <a href="#contact"><span class="en">Write to me</span><span class="fr">M'écrire</span></a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="embodiment.jpg" alt="Andrea with eyes closed, hugging herself in nature">
+    </div>
+  </section>
+
+  <section class="wrap grid block" id="who">
+    <h2 class="en">Who I am</h2>
+    <h2 class="fr">Qui je suis</h2>
+    <div class="side-content story en">
+      <p>For many years I followed the path my rational mind had drawn for me. I studied economics because it would "open many doors", then data science because everyone said it was the future. I ended up as a data analyst in a big corporation, spending my days improving strategies to sell more detergent.</p>
+      <p>I stayed almost four years. I call it the golden cage. The salary and the benefits were so good that it was hard to see how far that job was taking me from myself.</p>
+      <p>But a small voice inside me kept getting louder, asking: Who am I? Is this what I want to do for the world in this lifetime? What is my purpose? Can I be free? What is freedom?</p>
+      <p>That's when yoga came into my life. It brought me back into my body. I started to notice the games my mind was playing, and to feel something precious in me that couldn't grow in that environment. Slowly, a deep trust grew, and it helped me make the risky decision to quit my job and travel. A full jump into the dark, not knowing where it would lead.</p>
+      <p>Today I work with the body, helping people learn again how to feel. Often they come to me because they feel stuck, overwhelmed or anxious, as if they were running after life instead of living it. I've been there too.</p>
+      <p>If you recognise yourself in this, <a href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">book an intro call</a>. We'll just chat and see if it feels right.</p>
+      <p style="margin-bottom:0">With love,</p>
+      <p class="signature">Andrea</p>
+    </div>
+    <div class="side-content story fr">
+      <p>Pendant de nombreuses années, j'ai suivi le chemin que mon mental rationnel avait tracé pour moi. J'ai étudié l'économie parce que cela allait « m'ouvrir beaucoup de portes », puis la data science parce que tout le monde disait que c'était l'avenir. Je me suis retrouvée data analyst dans une grande entreprise, à passer mes journées à améliorer des stratégies pour vendre plus de lessive.</p>
+      <p>J'y suis restée presque quatre ans. Je l'appelle la cage dorée. Le salaire et les avantages étaient si bons qu'il était difficile de voir à quel point ce travail m'éloignait de moi-même.</p>
+      <p>Mais une petite voix en moi devenait de plus en plus forte et me demandait&nbsp;: Qui suis-je&nbsp;? Est-ce vraiment ce que je veux faire pour le monde dans cette vie&nbsp;? Quel est mon but&nbsp;? Est-ce que je peux être libre&nbsp;? Qu'est-ce que la liberté&nbsp;?</p>
+      <p>C'est à ce moment-là que le yoga est entré dans ma vie. Il m'a ramenée dans mon corps. J'ai commencé à remarquer les jeux de mon mental, et à sentir en moi quelque chose de précieux qui ne pouvait pas grandir dans cet environnement. Peu à peu, une confiance profonde est née, et elle m'a aidée à prendre la décision risquée de quitter mon travail et de voyager. Un saut dans le vide, sans savoir où il me mènerait.</p>
+      <p>Aujourd'hui, je travaille avec le corps et j'aide les personnes à réapprendre à ressentir. Souvent, elles viennent me voir parce qu'elles se sentent bloquées, débordées ou anxieuses, comme si elles couraient après la vie au lieu de la vivre. Je suis passée par là, moi aussi.</p>
+      <p>Si vous vous reconnaissez dans ces mots, <a href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">réservez un appel découverte</a>. On discutera simplement, pour voir si c'est juste pour vous.</p>
+      <p style="margin-bottom:0">Avec amour,</p>
+      <p class="signature">Andrea</p>
+    </div>
+  </section>
+
+  <section class="wrap grid block" id="offer">
+    <h2 class="en">What I offer</h2>
+    <h2 class="fr">Ce que je propose</h2>
+    <div class="side-content">
+
+      <div class="offer">
+        <span class="num">01</span>
+        <div>
+          <h3 class="en">1:1 somatic coaching</h3>
+          <h3 class="fr">Coaching somatique individuel</h3>
+          <p class="en">A space without judgement, where all your parts can feel safe to show up. We start by slowing down, connecting to the breath and to the sensations in the body. We learn how to read and regulate your nervous system, to regain control over your life. We learn the language of the body. Through breath, movement, sound and touch, we give a voice to the sensations and to the parts of you that usually get no space. When we make room for them, we can often understand the need they carry underneath, and unlock what has been holding you back. Little by little, you will learn to listen to the messages of your body and build a new relationship with yourself.</p>
+          <p class="fr">Un espace sans jugement, où toutes vos parts peuvent se sentir en sécurité pour se montrer. On commence par ralentir, en se connectant au souffle et aux sensations du corps. On apprend à lire et à réguler votre système nerveux, pour reprendre la main sur votre vie. On apprend le langage du corps. Avec la respiration, le mouvement, le son et le toucher, on donne une voix aux sensations et aux parties de vous auxquelles on ne laisse pas de place d'habitude. Quand on leur accorde de l'espace, on arrive souvent à comprendre le besoin qu'elles portent au fond, et à débloquer ce qui vous retenait. Petit à petit, vous apprendrez à écouter les messages de votre corps et à construire une nouvelle relation avec vous-même.</p>
+          <div class="guide-box">
+            <p class="en">Curious how your nervous system works? I wrote a short free guide on stress, anxiety and how the body finds its way back to calm.</p>
+            <p class="fr">Envie de comprendre comment fonctionne votre système nerveux&nbsp;? J'ai écrit un petit guide gratuit sur le stress, l'anxiété et la façon dont le corps retrouve le calme.</p>
+            <a href="guide.html"><span class="en">Read the guide</span><span class="fr">Lire le guide</span></a>
+          </div>
+        </div>
+        <span class="meta en">Sessions and packages, in person or online</span>
+        <span class="meta fr">Séances et forfaits, en présentiel ou en ligne</span>
+      </div>
+
+      <div class="offer">
+        <span class="num">02</span>
+        <div>
+          <h3>Somatic Flow yoga</h3>
+          <p class="en">Hatha-vinyasa where you really feel your muscles as you move. Open to all levels. <a href="#yoga">More about the yoga</a></p>
+          <p class="fr">Du hatha-vinyasa où l'on sent vraiment ses muscles en mouvement. Ouvert à tous les niveaux. <a href="#yoga">En savoir plus sur le yoga</a></p>
+        </div>
+        <span class="meta en">Classes, workshops and private sessions</span>
+        <span class="meta fr">Cours, ateliers et séances privées</span>
+      </div>
+
+      <div class="offer">
+        <span class="num">03</span>
+        <div>
+          <h3 class="en">Women's circles and work with women</h3>
+          <h3 class="fr">Cercles de femmes et accompagnement des femmes</h3>
+          <p class="en">A small circle where women can bring what they carry and be met without being fixed. In 1:1 work too, I accompany women around feeling safe in their body, sensuality, the menstrual cycle, and the beliefs we inherited about how a woman's body should look and behave.</p>
+          <p class="fr">Un petit cercle où les femmes peuvent déposer ce qu'elles portent et être accueillies, sans qu'on cherche à les réparer. En individuel aussi, j'accompagne les femmes autour de la sécurité dans leur corps, de la sensualité, du cycle menstruel et des croyances héritées sur ce que le corps d'une femme devrait être.</p>
+        </div>
+        <span class="meta en">Circles monthly and free, in Lausanne</span>
+        <span class="meta fr">Cercles mensuels et gratuits, à Lausanne</span>
+      </div>
+
+      <div class="offer">
+        <span class="num">04</span>
+        <div>
+          <h3 class="en">Workshops</h3>
+          <h3 class="fr">Ateliers</h3>
+          <p class="en">Nervous system regulation, embodiment and contact dance, in small groups.</p>
+          <p class="fr">Régulation du système nerveux, embodiment et danse contact, en petits groupes.</p>
+        </div>
+        <span class="meta en">Online and in person</span>
+        <span class="meta fr">En ligne et en présentiel</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="wrap grid block" id="yoga">
+    <h2>Yoga</h2>
+    <div class="yoga-photo" style="grid-column: 1 / span 5">
+      <img src="yoga-teaching.jpg" alt="Andrea teaching a yoga class at the ALPS Foundation conference" loading="lazy">
+      <p class="caption en">Yoga class at the ALPS Foundation conference, 2026</p>
+      <p class="caption fr">Cours de yoga à la conférence de la Fondation ALPS, 2026</p>
+    </div>
+    <div class="yoga-body">
+      <p class="en">I teach Somatic Flow, hatha-vinyasa sequences taught with somatic awareness: moving with the breath, pausing to feel, and practising from sensation rather than performance.</p>
+      <p class="fr">J'enseigne le Somatic Flow, des séquences de hatha-vinyasa guidées avec une conscience somatique&nbsp;: bouger avec le souffle, faire des pauses pour ressentir, et pratiquer à partir des sensations plutôt que de la performance.</p>
+      <p class="en">We work on strength, flexibility and mobility, and on something often missing in a class: really feeling your muscles as you move. It's a body awareness you can take into any sport, and into everyday life. Open to all levels.</p>
+      <p class="fr">On travaille la force, la souplesse et la mobilité, et quelque chose qui manque souvent en cours&nbsp;: vraiment sentir ses muscles en mouvement. Une conscience du corps qui se transpose dans tout sport, et dans la vie de tous les jours. Ouvert à tous les niveaux.</p>
+      <p class="en">Group classes, workshops and private sessions in Lausanne. <a href="#contact">Write to me</a> for upcoming dates.</p>
+      <p class="fr">Cours collectifs, ateliers et séances privées à Lausanne. <a href="#contact">Écrivez-moi</a> pour les prochaines dates.</p>
+      <p class="facts en">200h Yoga Alliance certified (Hatha and Ashtanga), trained in Nepal and India.</p>
+      <p class="facts fr">Certifiée 200h Yoga Alliance (Hatha et Ashtanga), formée au Népal et en Inde.</p>
+    </div>
+  </section>
+
+  <section class="wrap grid block" id="words">
+    <h2 class="en">Kind words</h2>
+    <h2 class="fr">Ils en parlent</h2>
+    <div class="side-content">
+      <figure class="quote">
+        <blockquote class="en">"I have tried yoga many times, but this is the first time it truly reached me. The gentleness of your guidance and your invitations let me relax into not caring about what it looks like, just feeling what was happening inside me. You have a gift."</blockquote>
+        <blockquote class="fr">« J'ai essayé le yoga plusieurs fois, mais c'est la première fois que cela m'a vraiment touchée. La douceur avec laquelle vous avez guidé la séance et vos invitations m'ont permis de me détendre, sans me soucier de quoi j'avais l'air, juste en sentant ce qui se passait en moi. Vous avez un don. »</blockquote>
+        <figcaption class="en">Participant, yoga class at the ALPS Foundation conference</figcaption>
+        <figcaption class="fr">Participante, cours de yoga à la conférence de la Fondation ALPS</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote class="en">"I didn't really know what to expect and was a little nervous, but Andrea created a safe and welcoming space for us. I had been highly anxious for several days, and after the workshop I found myself in a really strong state of bliss, self-love, acceptance and connection."</blockquote>
+        <blockquote class="fr">« Je ne savais pas vraiment à quoi m'attendre et j'étais un peu nerveuse, mais Andrea a créé pour nous un espace sûr et accueillant. J'étais très anxieuse depuis plusieurs jours, et après l'atelier je me suis retrouvée dans un état de joie profonde, d'amour de soi, d'acceptation et de connexion. »</blockquote>
+        <figcaption class="en">Anne, contact dance workshop</figcaption>
+        <figcaption class="fr">Anne, atelier de danse contact (traduit de l'anglais)</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote class="en">"Andrea and Federico guided the contact dance with kindness, gentleness, and care. It made me realize how much I had been missing that feeling of connection."</blockquote>
+        <blockquote class="fr">« Andrea et Federico ont guidé la danse contact avec gentillesse, douceur et attention. Cela m'a fait réaliser à quel point ce sentiment de connexion me manquait. »</blockquote>
+        <figcaption class="en">Juan, contact dance workshop in nature</figcaption>
+        <figcaption class="fr">Juan, atelier de danse contact dans la nature (traduit de l'anglais)</figcaption>
+      </figure>
+      <figure class="quote">
+        <blockquote class="en">"This journey made me explore parts of myself I didn't know existed. I learned to know the sensations of my body through something so simple and yet so fundamental: the breath. Never a judgement, only understanding and extraordinary help."</blockquote>
+        <blockquote class="fr">« Ce parcours m'a fait explorer des parts de moi dont je ne connaissais pas l'existence. J'ai appris à connaître les sensations de mon corps à travers quelque chose de si simple et pourtant si fondamental&nbsp;: le souffle. Jamais un jugement, seulement de la compréhension et une aide extraordinaire. »</blockquote>
+        <figcaption class="en">Antonio, 1:1 somatic coaching (translated from Italian)</figcaption>
+        <figcaption class="fr">Antonio, coaching somatique individuel (traduit de l'italien)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap strip">
+    <figure>
+      <img src="circle.jpg" alt="Andrea guiding the closing ceremony of the ALPS Summer School 2026, a circle of people above the lake" loading="lazy">
+      <figcaption class="caption en">Closing ceremony, ALPS Summer School 2026</figcaption>
+      <figcaption class="caption fr">Cérémonie de clôture, Summer School ALPS 2026</figcaption>
+    </figure>
+    <figure>
+      <img src="women.jpg" alt="Portrait of Andrea with a red scarf" loading="lazy" style="object-position: center 25%">
+      <figcaption class="caption en">Work with women</figcaption>
+      <figcaption class="caption fr">Accompagnement des femmes</figcaption>
+    </figure>
   </div>
 
-  <header class="hero">
-    <img class="hero-photo" src="andrea.jpg" alt="Andrea Bacconi" />
-    <p class="name-mark">Andrea Bacconi</p>
-    <h1 class="en">Come back to<br><em>yourself</em></h1>
-    <h1 class="fr">Revenir à<br><em>soi</em></h1>
-    <p class="sub en">Somatic coaching, yoga and nervous system regulation in Lausanne. Working with the body through breath, touch, movement, and sound.</p>
-    <p class="sub fr">Coaching somatique, yoga et régulation du système nerveux à Lausanne. Un travail avec le corps, par le souffle, le toucher, le mouvement et le son.</p>
-    <div class="hero-cta">
-      <a class="link-btn btn-primary" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">
-        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        <span class="label en">Book a free intro call</span>
-        <span class="label fr">Réserver un appel découverte gratuit</span>
-        <span class="arrow">&rarr;</span>
-      </a>
-      <a class="soft-link en" href="#begin">or get in touch another way</a>
-      <a class="soft-link fr" href="#begin">ou me contacter autrement</a>
+  <section class="wrap grid block" id="contact">
+    <h2 class="en">Let's talk</h2>
+    <h2 class="fr">On en parle&nbsp;?</h2>
+    <div class="side-content">
+      <p class="en" style="font-family: var(--serif); font-size: 22px; margin: 0 0 30px">The first call is free and without commitment. We'll see together if this work is right for you.</p>
+      <p class="fr" style="font-family: var(--serif); font-size: 22px; margin: 0 0 30px">Le premier appel est gratuit et sans engagement. On verra ensemble si ce travail est fait pour vous.</p>
+      <div class="actions">
+        <a class="btn" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener"><span class="en">Book a free intro call</span><span class="fr">Réserver un appel découverte gratuit</span></a>
+        <a class="btn-line" href="mailto:andrea.bacconi1996@gmail.com">andrea.bacconi1996@gmail.com</a>
+        <a href="https://instagram.com/bacco.per.bacco" target="_blank" rel="noopener">Instagram @bacco.per.bacco</a>
+      </div>
     </div>
-    <span class="scroll-hint en">Scroll</span>
-    <span class="scroll-hint fr">Défiler</span>
-  </header>
+  </section>
 
-  <main>
+</main>
 
-    <section class="wrap reveal">
-      <span class="eyebrow en">The work</span>
-      <span class="eyebrow fr">L'approche</span>
-      <p class="lede en">We've spent so long focusing on what to do, that we've forgotten who we are.</p>
-      <p class="lede fr">Nous avons passé tant de temps à nous demander quoi faire que nous avons oublié qui nous sommes.</p>
-      <div class="media-grid reverse">
-        <img class="arch-photo" src="embodiment.jpg" alt="Andrea Bacconi in nature, hands resting on her chest" loading="lazy" />
-        <div>
-      <div class="prose en">
-        <p>Reconnecting with the body lets us recover an inner wisdom that the overactive mind so often clouds over. Together we can slow down and listen more deeply.</p>
-        <p>Many of the people I work with come to me with stress, anxiety, or the feeling of being constantly "on". Through the body, we learn to recognise these states and give the nervous system a way back to calm.</p>
-        <p>So much of what we feel as tension, restlessness, or being stuck is the body speaking, not malfunctioning. Symptoms are expressions of parts of us that haven't yet been heard.</p>
-        <p>This work is an invitation to listen rather than override. To let the nervous system find safety, so that what is already whole in you has room to rise and meet your life.</p>
-      </div>
-      <div class="prose fr">
-        <p>Renouer avec le corps permet de retrouver une sagesse intérieure que le mental, trop actif, vient souvent voiler. Ensemble, nous pouvons ralentir et écouter plus profondément.</p>
-        <p>Beaucoup de personnes que j'accompagne viennent avec du stress, de l'anxiété ou l'impression d'être toujours «&nbsp;sous tension&nbsp;». À travers le corps, on apprend à reconnaître ces états et à offrir au système nerveux un chemin de retour vers le calme.</p>
-        <p>Une grande partie de ce que nous vivons comme tension, agitation ou blocage, c'est le corps qui parle, pas un corps qui dysfonctionne. Les symptômes expriment des parts de nous qui n'ont pas encore été entendues.</p>
-        <p>Ce travail est une invitation à écouter plutôt qu'à forcer. À laisser le système nerveux retrouver la sécurité, pour que ce qui est déjà entier en vous ait la place d'émerger et de rencontrer votre vie.</p>
-      </div>
-        </div>
-      </div>
-    </section>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <span>Andrea Bacconi, Lausanne</span>
+      <span class="en">Somatic coaching, yoga, women's circles and workshops</span>
+      <span class="fr">Coaching somatique, yoga, cercles de femmes et ateliers</span>
+    </div>
+    <p class="disclaimer en">This work complements, but does not replace, medical or psychological care.</p>
+    <p class="disclaimer fr">Ce travail complète, mais ne remplace pas, un suivi médical ou psychologique.</p>
+  </div>
+</footer>
 
-    <div class="wrap"><hr class="divider"></div>
-
-    <section class="wrap reveal" id="yoga">
-      <span class="eyebrow">Yoga</span>
-      <p class="lede en">Somatic Flow, a yoga you <em>feel</em> from the inside.</p>
-      <p class="lede fr">Somatic Flow, un yoga qui se <em>ressent</em> de l'intérieur.</p>
-      <div class="yoga-grid">
-        <img class="yoga-photo" src="yoga-teaching.jpg" alt="Andrea Bacconi teaching a yoga class at the ALPS Foundation conference" loading="lazy" style="object-position:center 40%;" />
-        <div>
-          <div class="prose en">
-            <p>I teach Somatic Flow, hatha-vinyasa sequences taught with somatic awareness: moving with the breath, pausing to feel, and practicing from sensation rather than performance.</p>
-            <p>We work on strength, flexibility and mobility, and on something often missing in a class: really feeling your muscles as you move. It's a body awareness you can take into any sport, and into everyday life. Open to all levels.</p>
-            <p>Group classes, workshops and private sessions in Lausanne. Write to me for upcoming dates.</p>
-          </div>
-          <div class="prose fr">
-            <p>J'enseigne le Somatic Flow, des séquences de hatha-vinyasa guidées avec une conscience somatique&nbsp;: bouger avec le souffle, faire des pauses pour ressentir, et pratiquer à partir des sensations plutôt que de la performance.</p>
-            <p>On travaille la force, la souplesse et la mobilité, et quelque chose qui manque souvent en cours&nbsp;: vraiment sentir ses muscles en mouvement. Une conscience du corps qui se transpose dans tout sport, et dans la vie de tous les jours. Ouvert à tous les niveaux.</p>
-            <p>Cours collectifs, ateliers et séances privées à Lausanne. Écrivez-moi pour les prochaines dates.</p>
-          </div>
-          <p class="yoga-facts en">200h Yoga Alliance certified (Hatha &amp; Ashtanga), trained in Nepal and India</p>
-          <p class="yoga-facts fr">Certifiée 200h Yoga Alliance (Hatha &amp; Ashtanga), formée au Népal et en Inde</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <section class="wrap reveal">
-      <span class="eyebrow en">For women</span>
-      <span class="eyebrow fr">Pour les femmes</span>
-      <p class="lede en">A particular attention, for <em>those who want it</em>.</p>
-      <p class="lede fr">Une attention particulière, pour <em>celles qui le souhaitent</em>.</p>
-      <div class="media-grid">
-        <img class="arch-photo" src="women.jpg" alt="Portrait of Andrea Bacconi with a red scarf" loading="lazy" style="object-position:center 30%;" />
-        <div>
-      <div class="prose en">
-        <p>Much of what women carry in the body was never theirs to begin with. Conditioning about how much space to take, what is safe to feel, how the body should look and behave, what desire is allowed to be.</p>
-        <p>I work with women around feeling safe to feel, reclaiming sovereignty over the body and its sensuality, reconnecting with the menstrual cycle, and questioning the inherited beliefs that shape how we inhabit ourselves.</p>
-        <p>This happens in 1:1 work and in circles. Both move at the pace your system allows.</p>
-      </div>
-      <div class="prose fr">
-        <p>Une grande partie de ce que les femmes portent dans leur corps ne leur a jamais appartenu. Des conditionnements sur la place qu'on peut prendre, sur ce qu'il est permis de ressentir, sur la façon dont le corps devrait être et se comporter, sur ce que le désir a le droit d'être.</p>
-        <p>J'accompagne les femmes pour se sentir en sécurité de ressentir, retrouver la souveraineté sur leur corps et leur sensualité, renouer avec leur cycle menstruel, et questionner les croyances héritées qui façonnent la manière dont nous habitons notre corps.</p>
-        <p>Ce travail se fait en individuel et en cercles, toujours au rythme que votre système permet.</p>
-      </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <section class="wrap reveal">
-      <figure class="wide-photo">
-        <img src="circle.jpg" alt="Andrea guiding the closing ceremony of the ALPS Summer School 2026, a circle of participants outdoors above the lake" loading="lazy" />
-        <figcaption class="photo-caption en">Guiding the closing ceremony of the ALPS Summer School 2026</figcaption>
-        <figcaption class="photo-caption fr">Cérémonie de clôture de la Summer School ALPS 2026</figcaption>
-      </figure>
-      <span class="eyebrow en">Ways to work together</span>
-      <span class="eyebrow fr">Travailler ensemble</span>
-
-      <div class="offer">
-        <h3 class="en">1:1 somatic coaching</h3>
-        <h3 class="fr">Coaching somatique individuel</h3>
-        <span class="price en">Sessions and packages</span>
-        <span class="price fr">Séances et forfaits</span>
-        <p class="en">A grounded, ongoing space to work with what's moving in you, through the body, at the pace your system allows. Especially if you're living with stress, anxiety or overwhelm.</p>
-        <p class="fr">Un espace stable et suivi pour travailler avec ce qui bouge en vous, à travers le corps, au rythme que votre système permet. En particulier si vous traversez du stress, de l'anxiété ou une période de surcharge.</p>
-      </div>
-
-      <div class="offer">
-        <h3>Somatic Flow yoga</h3>
-        <span class="price en">Classes, workshops, private</span>
-        <span class="price fr">Cours, ateliers, privé</span>
-        <p class="en">Hatha-vinyasa with somatic awareness, for all levels. Group classes in Lausanne and private sessions on request.</p>
-        <p class="fr">Du hatha-vinyasa avec une conscience somatique, pour tous les niveaux. Cours collectifs à Lausanne et séances privées sur demande.</p>
-      </div>
-
-      <div class="offer">
-        <h3 class="en">Women's circles</h3>
-        <h3 class="fr">Cercles de femmes</h3>
-        <span class="price en">Monthly, free, Lausanne</span>
-        <span class="price fr">Mensuel, gratuit, Lausanne</span>
-        <p class="en">A small, closed space where women can bring what they carry and be met without being fixed. Co-created rather than taught. In person, around Lausanne.</p>
-        <p class="fr">Un petit espace fermé où les femmes peuvent déposer ce qu'elles portent et être accueillies, sans qu'on cherche à les réparer. Co-créé plutôt qu'enseigné. En présentiel, autour de Lausanne.</p>
-      </div>
-
-      <div class="offer">
-        <h3 class="en">Workshops</h3>
-        <h3 class="fr">Ateliers</h3>
-        <span class="price en">Online &amp; in person</span>
-        <span class="price fr">En ligne et en présentiel</span>
-        <p class="en">Sessions on nervous system regulation, embodiment and contact dance. Online and in-person events.</p>
-        <p class="fr">Des ateliers sur la régulation du système nerveux, l'embodiment et la danse contact. En ligne et en présentiel.</p>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <section class="wrap reveal" id="kind-words">
-      <span class="eyebrow en">Kind words</span>
-      <span class="eyebrow fr">Ils en parlent</span>
-
-      <div class="quotes">
-        <figure class="quote">
-          <blockquote class="en">I have tried yoga many times, but this is the first time it truly reached me. The gentleness of your guidance and your invitations let me relax into not caring about what it looks like, just feeling what was happening inside me. You have a gift.</blockquote>
-          <blockquote class="fr">J'ai essayé le yoga plusieurs fois, mais c'est la première fois que cela m'a vraiment touchée. La douceur avec laquelle vous avez guidé la séance et vos invitations m'ont permis de me détendre, sans me soucier de quoi j'avais l'air, juste en sentant ce qui se passait en moi. Vous avez un don.</blockquote>
-          <figcaption class="en">Participant, yoga class at the ALPS Foundation conference</figcaption>
-          <figcaption class="fr">Participante, cours de yoga à la conférence de la Fondation ALPS</figcaption>
-        </figure>
-
-        <figure class="quote">
-          <blockquote class="en">I didn't really know what to expect and was a little nervous, but Andrea created a safe and welcoming space for us. I had been highly anxious for several days, and after the workshop I found myself in a really strong state of bliss, self-love, acceptance and connection.</blockquote>
-          <blockquote class="fr">Je ne savais pas vraiment à quoi m'attendre et j'étais un peu nerveuse, mais Andrea a créé pour nous un espace sûr et accueillant. J'étais très anxieuse depuis plusieurs jours, et après l'atelier je me suis retrouvée dans un état de joie profonde, d'amour de soi, d'acceptation et de connexion.</blockquote>
-          <figcaption class="en">Anne, contact dance workshop</figcaption>
-          <figcaption class="fr">Anne, atelier de danse contact <span class="note">(traduit de l'anglais)</span></figcaption>
-        </figure>
-
-        <figure class="quote">
-          <blockquote class="en">Andrea and Federico guided the contact dance with kindness, gentleness, and care. It made me realize how much I had been missing that feeling of connection.</blockquote>
-          <blockquote class="fr">Andrea et Federico ont guidé la danse contact avec gentillesse, douceur et attention. Cela m'a fait réaliser à quel point ce sentiment de connexion me manquait.</blockquote>
-          <figcaption class="en">Juan, contact dance workshop in nature</figcaption>
-          <figcaption class="fr">Juan, atelier de danse contact dans la nature <span class="note">(traduit de l'anglais)</span></figcaption>
-        </figure>
-
-        <figure class="quote">
-          <blockquote class="en">This journey made me explore parts of myself I didn't know existed. I learned to know the sensations of my body through something so simple and yet so fundamental: the breath. Never a judgement, only understanding and extraordinary help.</blockquote>
-          <blockquote class="fr">Ce parcours m'a fait explorer des parts de moi dont je ne connaissais pas l'existence. J'ai appris à connaître les sensations de mon corps à travers quelque chose de si simple et pourtant si fondamental&nbsp;: le souffle. Jamais un jugement, seulement de la compréhension et une aide extraordinaire.</blockquote>
-          <figcaption class="en">Antonio, 1:1 somatic coaching <span class="note">(translated from Italian)</span></figcaption>
-          <figcaption class="fr">Antonio, coaching somatique individuel <span class="note">(traduit de l'italien)</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <div class="wrap"><hr class="divider"></div>
-
-    <section class="wrap connect reveal" id="begin">
-      <span class="eyebrow en">Begin</span>
-      <span class="eyebrow fr">Commencer</span>
-      <p class="lede en">A first conversation, with <em>no obligation</em>, to feel whether this is for you.</p>
-      <p class="lede fr">Un premier échange, <em>sans engagement</em>, pour sentir si c'est pour vous.</p>
-
-      <div class="links">
-        <a class="link-btn btn-primary" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          <span class="label en">Book a free intro call</span>
-          <span class="label fr">Réserver un appel découverte gratuit</span>
-          <span class="arrow">&rarr;</span>
-        </a>
-        <a class="link-btn btn-gold" href="https://instagram.com/bacco.per.bacco" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
-          <span class="label en">Follow on Instagram</span>
-          <span class="label fr">Me suivre sur Instagram</span>
-          <span class="arrow">&rarr;</span>
-        </a>
-        <a class="link-btn btn-outline" href="mailto:andrea.bacconi1996@gmail.com">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
-          <span class="label en">Write me an email</span>
-          <span class="label fr">M'écrire un e-mail</span>
-          <span class="arrow">&rarr;</span>
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer-mark">Andrea Bacconi</div>
-    <p class="footer-text en">
-      Somatic coaching · Somatic Flow yoga · Nervous system regulation<br>
-      Workshops · Women's circles · Lausanne
-    </p>
-    <p class="footer-text fr">
-      Coaching somatique · Yoga Somatic Flow · Régulation du système nerveux<br>
-      Ateliers · Cercles de femmes · Lausanne
-    </p>
-    <p class="footer-note en">This work complements, but does not replace, medical or psychological care.</p>
-    <p class="footer-note fr">Ce travail complète, mais ne remplace pas, un suivi médical ou psychologique.</p>
-  </footer>
-
-  <script>
-    // Reveal on scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-    // Language switch (EN / FR)
-    const META = {
-      en: { title: 'Andrea Bacconi · Somatic Coach & Yoga Teacher · Lausanne',
-            desc: 'Somatic coaching for stress and anxiety, Somatic Flow yoga and nervous system regulation in Lausanne. Come back to yourself through breath, touch, movement, and sound.' },
-      fr: { title: 'Andrea Bacconi · Coach somatique et professeure de yoga · Lausanne',
-            desc: 'Coaching somatique pour le stress et l\'anxiété, yoga Somatic Flow et régulation du système nerveux à Lausanne. Revenir à soi par le souffle, le toucher, le mouvement et le son.' }
-    };
-    function setLang(lang) {
-      document.body.classList.toggle('fr', lang === 'fr');
-      document.documentElement.lang = lang;
-      document.title = META[lang].title;
-      const d = document.querySelector('meta[name="description"]');
-      if (d) d.setAttribute('content', META[lang].desc);
-      document.querySelectorAll('[data-set-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)));
-      try { localStorage.setItem('lang', lang); } catch (e) {}
-    }
-    document.querySelectorAll('[data-set-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setLang)));
-
-    // Starting language: ?lang=fr in the link, then the visitor's last choice, then their browser language
-    let start = 'en';
-    try {
-      const q = new URLSearchParams(location.search).get('lang');
-      const saved = localStorage.getItem('lang');
-      if (q === 'fr' || q === 'en') start = q;
-      else if (saved === 'fr' || saved === 'en') start = saved;
-      else if ((navigator.language || '').toLowerCase().startsWith('fr')) start = 'fr';
-    } catch (e) {
-      if ((navigator.language || '').toLowerCase().startsWith('fr')) start = 'fr';
-    }
-    setLang(start);
-  </script>
-
+<script>
+  const META = {
+    en: { title: 'Andrea Bacconi | Somatic coach and yoga teacher in Lausanne',
+          desc: 'Somatic coaching for stress and anxiety, Somatic Flow yoga, women\'s circles and workshops in Lausanne. Andrea Bacconi.' },
+    fr: { title: 'Andrea Bacconi | Coach somatique et professeure de yoga à Lausanne',
+          desc: 'Coaching somatique pour le stress et l\'anxiété, yoga Somatic Flow, cercles de femmes et ateliers à Lausanne. Andrea Bacconi.' }
+  };
+  function setLang(lang) {
+    document.body.classList.toggle('fr', lang === 'fr');
+    document.documentElement.lang = lang;
+    document.title = META[lang].title;
+    const d = document.querySelector('meta[name="description"]');
+    if (d) d.setAttribute('content', META[lang].desc);
+    document.querySelectorAll('[data-set-lang]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === lang)));
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('[data-set-lang]').forEach(b => b.addEventListener('click', () => setLang(b.dataset.setLang)));
+  let start = 'en';
+  try {
+    const q = new URLSearchParams(location.search).get('lang');
+    const saved = localStorage.getItem('lang');
+    if (q === 'fr' || q === 'en') start = q;
+    else if (saved === 'fr' || saved === 'en') start = saved;
+    else if ((navigator.language || '').toLowerCase().startsWith('fr')) start = 'fr';
+  } catch (e) {
+    if ((navigator.language || '').toLowerCase().startsWith('fr')) start = 'fr';
+  }
+  setLang(start);
+</script>
 </body>
 </html>
