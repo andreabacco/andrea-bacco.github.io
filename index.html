@@ -10,12 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F6F3EE;
-    --ink: #26222B;
-    --body: #4A4450;
-    --muted: #6B6470;
-    --rule: #D8D1C7;
-    --accent: #8E3B2E;
+    --bg: #FAF6F1;
+    --bg-deep: #F2EAE0;
+    --ink: #3E2F4E;
+    --body: #5C4A6E;
+    --muted: #6E6478;
+    --rule: #E3D8C8;
+    --gold: #BFA06A;
+    --accent: #86693A;
     --serif: 'Source Serif 4', Georgia, serif;
     --sans: 'Public Sans', Arial, sans-serif;
   }
@@ -46,7 +48,7 @@
   h2 { font-family: var(--serif); font-weight: 400; font-size: 34px; line-height: 1.2; margin: 0 0 24px; grid-column: span 3; }
   .side-content { grid-column: 5 / span 8; }
   .btn { display: inline-block; background: var(--ink); color: var(--bg); text-decoration: none; padding: 15px 24px; font-size: 15px; font-weight: 500; }
-  .btn:hover { background: var(--accent); color: var(--bg); }
+  .btn:hover { background: #2E2239; color: var(--bg); }
   .btn-line { display: inline-block; padding: 14px 22px; border: 1px solid var(--ink); text-decoration: none; font-size: 15px; }
   .actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
   .caption { font-size: 13px; color: var(--muted); margin-top: 8px; }
@@ -63,7 +65,13 @@
   /* who */
   .story { font-family: var(--serif); font-size: 20px; line-height: 1.7; }
   .story p { margin: 0 0 20px; }
-  .signature { font-family: 'Caveat', cursive; font-size: 44px; color: var(--accent); line-height: 1.1; margin: 4px 0 0; }
+  .signature { font-family: 'Caveat', cursive; font-size: 44px; color: var(--gold); line-height: 1.1; margin: 4px 0 0; }
+
+  .creds { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 15px; line-height: 1.6; }
+  .creds p { margin: 0 0 10px; color: var(--muted); }
+  .creds ul { list-style: none; padding: 0; margin: 0; }
+  .creds li { padding: 6px 0; color: var(--ink); }
+  .creds li span { color: var(--muted); }
 
   /* offers */
   .offer { display: grid; grid-template-columns: 56px minmax(0, 1fr) 190px; gap: 16px; padding: 24px 0; border-bottom: 1px solid var(--rule); }
@@ -73,7 +81,7 @@
   .offer h3 { margin: 0 0 6px; font-size: 19px; font-weight: 500; }
   .offer p { margin: 0 0 10px; color: var(--body); font-size: 16px; }
   .meta { font-size: 14px; color: var(--muted); text-align: right; padding-top: 3px; }
-  .guide-box { margin-top: 16px; padding: 18px 20px; border: 1px solid var(--rule); background: #FBF9F5; }
+  .guide-box { margin-top: 16px; padding: 18px 20px; border: 1px solid var(--gold); background: var(--bg-deep); }
   .guide-box p { margin: 0 0 8px; font-size: 15px; }
 
   /* yoga */
@@ -165,6 +173,14 @@
       <p>If you recognise yourself in this, <a href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">book an intro call</a>. We'll just chat and see if it feels right.</p>
       <p style="margin-bottom:0">With love,</p>
       <p class="signature">Andrea</p>
+      <div class="creds">
+        <p>Training</p>
+        <ul>
+          <li>InnerLifeSkills Master Coach <span>(ICF-accredited school)</span></li>
+          <li>Somatic Educator <span>(Somatic Institute for Women)</span></li>
+          <li>200h Yoga Teacher, Hatha and Ashtanga <span>(Yoga Alliance)</span></li>
+        </ul>
+      </div>
     </div>
     <div class="side-content story fr">
       <p>Pendant de nombreuses années, j'ai suivi le chemin que mon mental rationnel avait tracé pour moi. J'ai étudié l'économie parce que cela allait « m'ouvrir beaucoup de portes », puis la data science parce que tout le monde disait que c'était l'avenir. Je me suis retrouvée data analyst dans une grande entreprise, à passer mes journées à améliorer des stratégies pour vendre plus de lessive.</p>
@@ -175,6 +191,14 @@
       <p>Si vous vous reconnaissez dans ces mots, <a href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">réservez un appel découverte</a>. On discutera simplement, pour voir si c'est juste pour vous.</p>
       <p style="margin-bottom:0">Avec amour,</p>
       <p class="signature">Andrea</p>
+      <div class="creds">
+        <p>Formations</p>
+        <ul>
+          <li>Master Coach InnerLifeSkills <span>(école accréditée ICF)</span></li>
+          <li>Éducatrice somatique <span>(Somatic Institute for Women)</span></li>
+          <li>Professeure de yoga 200h, Hatha et Ashtanga <span>(Yoga Alliance)</span></li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -246,10 +270,10 @@
       <p class="caption fr">Cours de yoga à la conférence de la Fondation ALPS, 2026</p>
     </div>
     <div class="yoga-body">
-      <p class="en">I teach Somatic Flow, hatha-vinyasa sequences taught with somatic awareness: moving with the breath, pausing to feel, and practising from sensation rather than performance.</p>
-      <p class="fr">J'enseigne le Somatic Flow, des séquences de hatha-vinyasa guidées avec une conscience somatique&nbsp;: bouger avec le souffle, faire des pauses pour ressentir, et pratiquer à partir des sensations plutôt que de la performance.</p>
-      <p class="en">We work on strength, flexibility and mobility, and on something often missing in a class: really feeling your muscles as you move. It's a body awareness you can take into any sport, and into everyday life. Open to all levels.</p>
-      <p class="fr">On travaille la force, la souplesse et la mobilité, et quelque chose qui manque souvent en cours&nbsp;: vraiment sentir ses muscles en mouvement. Une conscience du corps qui se transpose dans tout sport, et dans la vie de tous les jours. Ouvert à tous les niveaux.</p>
+      <p class="en">I teach Somatic Flow, hatha-vinyasa sequences taught with somatic awareness: moving with the breath, pausing to feel, and practising from sensation rather than performance. My somatic and coaching background brings nervous-system awareness and a warm, safe space to every class, for beginners and experienced practitioners alike.</p>
+      <p class="fr">J'enseigne le Somatic Flow, des séquences de hatha-vinyasa guidées avec une conscience somatique&nbsp;: bouger avec le souffle, faire des pauses pour ressentir, et pratiquer à partir des sensations plutôt que de la performance. Mon parcours somatique et de coach apporte à chaque cours une attention au système nerveux et un espace chaleureux et sécurisant, pour les débutants comme pour les pratiquants confirmés.</p>
+      <p class="en">In my classes we cultivate a body awareness you can take into any sport, and into everyday life. Open to all levels.</p>
+      <p class="fr">Dans mes cours, on cultive une conscience du corps que vous pouvez emporter dans tout sport, et dans la vie de tous les jours. Ouvert à tous les niveaux.</p>
       <p class="en">Group classes, workshops and private sessions in Lausanne. <a href="#contact">Write to me</a> for upcoming dates.</p>
       <p class="fr">Cours collectifs, ateliers et séances privées à Lausanne. <a href="#contact">Écrivez-moi</a> pour les prochaines dates.</p>
       <p class="facts en">200h Yoga Alliance certified (Hatha and Ashtanga), trained in Nepal and India.</p>

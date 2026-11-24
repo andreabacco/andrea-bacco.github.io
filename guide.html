@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root { --bg: #F6F3EE; --ink: #26222B; --body: #4A4450; --muted: #6B6470; --rule: #D8D1C7; --accent: #8E3B2E;
+  :root { --bg: #FAF6F1; --bg-deep: #F2EAE0; --ink: #3E2F4E; --body: #5C4A6E; --muted: #6E6478; --rule: #E3D8C8; --gold: #BFA06A; --accent: #86693A;
           --serif: 'Source Serif 4', Georgia, serif; --sans: 'Public Sans', Arial, sans-serif; }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
@@ -25,42 +25,78 @@
   .lang button { background: none; border: 0; font: inherit; font-size: 14px; color: var(--muted); cursor: pointer; padding: 4px 2px; }
   .lang button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
-  article { max-width: 760px; margin: 0 auto; padding: 64px 32px 80px; }
-  .kicker { font-size: 15px; color: var(--muted); margin: 0 0 18px; }
-  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 6vw, 60px); line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 22px; }
-  .lead { font-size: 20px; color: var(--body); margin: 0 0 30px; }
-  .download { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; padding: 22px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 44px; }
+  article { max-width: 820px; margin: 0 auto; padding: 48px 32px 80px; }
+  .cover { background: var(--ink); color: var(--bg); padding: 40px 40px 34px; margin-bottom: 32px; }
+  .cover .kicker { font-size: 14px; color: var(--gold); margin: 0 0 14px; }
+  .cover h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 5.5vw, 52px); line-height: 1.08; margin: 0 0 16px; }
+  .cover .lead { font-size: 18px; color: #DCD3E3; margin: 0 0 26px; }
+  .cover-actions { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
   .btn { display: inline-block; background: var(--ink); color: var(--bg); text-decoration: none; padding: 14px 22px; font-size: 15px; font-weight: 500; }
-  .btn:hover { background: var(--accent); color: var(--bg); }
-  .small { font-size: 14px; color: var(--muted); }
-  .fr-note { background: #FBF9F5; border: 1px solid var(--rule); padding: 14px 18px; font-size: 15px; margin-bottom: 36px; }
+  .btn:hover { background: #2E2239; color: var(--bg); }
+  .btn-light { background: var(--bg); color: var(--ink); }
+  .btn-light:hover { background: var(--gold); color: var(--ink); }
+  .cover .small { font-size: 14px; color: #C9BED3; }
+  .fr-note { background: var(--bg-deep); padding: 14px 18px; font-size: 15px; margin-bottom: 32px; }
 
-  h2 { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.2; margin: 64px 0 14px; }
-  h2 .n { color: var(--accent); font-family: var(--sans); font-size: 16px; display: block; margin-bottom: 6px; }
-  h3 { font-size: 18px; font-weight: 500; margin: 0 0 4px; }
-  p { margin: 0 0 16px; }
-  .intro { font-family: var(--serif); font-size: 21px; line-height: 1.6; margin-bottom: 8px; }
-  .part { border-top: 1px solid var(--rule); padding: 22px 0 6px; }
-  .role { font-size: 14px; color: var(--accent); margin: 0 0 2px; }
-  .note { border-left: 3px solid var(--accent); padding: 4px 0 4px 18px; margin: 28px 0; font-family: var(--serif); font-size: 19px; }
-  figure { margin: 32px 0; }
-  figure img { width: 100%; background: #fff; }
-  figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
-  .state { border-top: 1px solid var(--rule); padding: 22px 0 8px; }
-  .state h3 span { font-weight: 400; color: var(--muted); }
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 30px; line-height: 1.2; margin: 60px 0 10px; }
+  h2 .n { color: var(--accent); }
+  h3 { font-size: 18px; font-weight: 500; margin: 0 0 6px; }
+  p { margin: 0 0 14px; }
+  .sub { color: var(--muted); margin-bottom: 24px; }
+  .intro { font-family: var(--serif); font-size: 21px; line-height: 1.6; color: var(--body); }
+
+  .card { border: 1.5px solid var(--gold); padding: 20px 24px 8px; margin-bottom: 16px; background: #FFFDF9; }
+  .card .role { font-size: 13px; font-weight: 500; color: var(--accent); margin: 0 0 2px; }
+  .good { background: var(--bg-deep); padding: 22px 26px; margin: 28px 0; font-family: var(--serif); font-size: 19px; line-height: 1.6; }
+  .good strong { font-family: var(--sans); font-size: 16px; display: block; margin-bottom: 6px; color: var(--accent); }
+  figure { margin: 30px 0; }
+  figure img { width: 100%; background: #fff; border: 1px solid var(--rule); }
+  figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; text-align: center; }
+
+  .state { padding: 20px 24px 8px; margin-bottom: 14px; }
+  .state h3 { font-size: 19px; }
+  .state h3 span { font-weight: 400; font-size: 15px; opacity: 0.85; margin-left: 6px; }
   .label { font-weight: 500; }
-  ul { padding-left: 20px; margin: 0 0 16px; }
-  li { margin-bottom: 8px; }
-  .tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
-  .tools div { border-top: 1px solid var(--rule); padding: 20px 0 8px; }
-  ol.steps { padding-left: 0; list-style: none; counter-reset: s; }
-  ol.steps li { counter-increment: s; border-top: 1px solid var(--rule); padding: 18px 0 8px 44px; position: relative; margin: 0; }
-  ol.steps li::before { content: counter(s); position: absolute; left: 0; top: 18px; color: var(--accent); font-size: 15px; }
-  .end { margin-top: 64px; border-top: 1px solid var(--ink); padding-top: 32px; }
-  .disclaimer { font-size: 14px; color: var(--muted); margin-top: 28px; }
+  .s-up { background: #F7E6E0; } .s-up h3 { color: #8E3F2B; }
+  .s-mid { background: #E7EEE1; } .s-mid h3 { color: #44613A; }
+  .s-down { background: #E5E7F1; } .s-down h3 { color: #4A5478; }
+
+  .table { border: 1px solid var(--rule); background: #FFFDF9; }
+  .row { display: grid; grid-template-columns: 1.1fr 0.8fr 2.2fr; border-top: 1px solid var(--rule); }
+  .row:first-child { border-top: 0; }
+  .row > div { padding: 16px 18px; }
+  .row > div + div { border-left: 1px solid var(--rule); }
+  .head { background: var(--ink); color: var(--bg); font-size: 14px; font-weight: 500; }
+  .head > div + div { border-left-color: #5C4A6E; }
+  .cell-state { font-weight: 500; }
+  .r-up .cell-state { color: #8E3F2B; } .r-down .cell-state { color: #4A5478; } .r-mid .cell-state { color: #44613A; }
+  .row ul { padding-left: 18px; margin: 8px 0 0; }
+  .row li { margin-bottom: 8px; font-size: 16px; }
+  .mlabel { display: none; font-size: 13px; color: var(--muted); }
+
+  .tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .tools .card { margin: 0; }
+
+  .practice { background: var(--bg-deep); border: 1.5px solid var(--gold); padding: 10px 28px 14px; margin-top: 20px; }
+  .practice ol { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  .practice li { counter-increment: s; padding: 16px 0 4px; border-top: 1px solid #E0D2BC; }
+  .practice li:first-child { border-top: 0; }
+  .practice h3::before { content: counter(s) ". "; color: var(--accent); }
+
+  .end { margin-top: 60px; background: var(--ink); color: var(--bg); padding: 34px 40px; }
+  .end h2 { margin-top: 0; color: var(--bg); }
+  .end p { color: #DCD3E3; }
+  .end a:not(.btn) { color: var(--bg); }
+  .disclaimer { font-size: 14px; color: var(--muted); margin-top: 26px; font-style: italic; }
+
   @media (max-width: 680px) {
-    .bar { padding: 22px; } article { padding: 44px 22px 64px; }
+    .bar { padding: 22px; } article { padding: 32px 18px 64px; }
+    .cover, .end { padding: 28px 22px; }
     .tools { grid-template-columns: 1fr; }
+    .head { display: none; }
+    .row { grid-template-columns: 1fr; }
+    .row > div + div { border-left: 0; padding-top: 0; }
+    .mlabel { display: block; }
   }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 </style>
@@ -84,35 +120,36 @@
 </header>
 
 <article>
-  <p class="kicker en">A free guide by Andrea Bacconi</p>
-  <p class="kicker fr">Un guide gratuit d'Andrea Bacconi</p>
-  <h1>Understanding the nervous system</h1>
-  <p class="lead">What anxiety and stress do in the brain and body, how to recognise the different states, and what helps the system come back.</p>
-
-  <div class="download">
-    <a class="btn" href="Nervous_System_basics.pdf" download><span class="en">Download as PDF</span><span class="fr">Télécharger en PDF</span></a>
-    <span class="small en">7 pages, to keep on your phone and come back to.</span>
-    <span class="small fr">7 pages, à garder sur votre téléphone.</span>
+  <div class="cover">
+    <p class="kicker en">A free guide by Andrea Bacconi</p>
+    <p class="kicker fr">Un guide gratuit d'Andrea Bacconi</p>
+    <h1>Understanding the nervous system</h1>
+    <p class="lead">What anxiety and stress do in the brain and body, how to recognise the different states, and what helps the system come back.</p>
+    <div class="cover-actions">
+      <a class="btn btn-light" href="Nervous_System_basics.pdf" download><span class="en">Download as PDF</span><span class="fr">Télécharger en PDF</span></a>
+      <span class="small en">7 pages, to keep on your phone and come back to.</span>
+      <span class="small fr">7 pages, à garder sur votre téléphone.</span>
+    </div>
   </div>
 
   <p class="fr-note fr">Ce guide est pour l'instant disponible en anglais. Une version française arrive bientôt.</p>
 
   <p class="intro">Anxiety is an old survival system doing its job a little too well. When we understand how it works, it stops feeling like something happening <em>to</em> us, and becomes something we can read and work with.</p>
 
-  <h2><span class="n">1</span>Three parts of the brain at play</h2>
-  <p>When the alarm is loud, these three work together, and the thinking part quietly steps back. That is why reasoning with ourselves in the moment is difficult.</p>
+  <h2><span class="n">1.</span> Three parts of the brain at play</h2>
+  <p class="sub">When the alarm is loud, these three work together, and the thinking part quietly steps back. That is why reasoning with ourselves in the moment is difficult.</p>
 
-  <div class="part">
+  <div class="card">
     <p class="role">The alarm</p>
     <h3>Amygdala</h3>
     <p>A small, almond-shaped part deep in the brain. Its whole job is to keep us safe, scanning constantly for threat and firing before we can think. Under prolonged pressure it can learn to tag ordinary situations (like work) as danger, so the signal alone sets it off, even on a morning when nothing is wrong.</p>
   </div>
-  <div class="part">
+  <div class="card">
     <p class="role">The timekeeper</p>
     <h3>Hippocampus</h3>
     <p>It files memories in time, sorting "that was dangerous <em>then</em>" from "this is safe <em>now</em>". Under stress it fragments, and the brain stops telling past from present. This is why anxiety can feel so urgent and present, as if the threat were right here.</p>
   </div>
-  <div class="part">
+  <div class="card">
     <p class="role">The regulator</p>
     <h3>Prefrontal cortex</h3>
     <p>The clear, reasoning part: it keeps perspective and tells past from present. When the alarm fires, the body readies to fight or run: blood goes to the muscles, the breath quickens, and stress chemicals (adrenaline and cortisol) flood the system. Those same chemicals quiet the prefrontal cortex, so the reasoning part goes partly offline right when it would be most useful. This is the survival system doing its job, but most of the time there is no real life danger to run from.</p>
@@ -123,23 +160,23 @@
     <figcaption>The alarm (amygdala) fires fast; the timekeeper (hippocampus) loses track of now; the regulator (prefrontal cortex) goes quiet.</figcaption>
   </figure>
 
-  <p class="note">The good news: this is reversible. With repeated somatic practice the amygdala calms, the hippocampus reorganises so the past feels like the past, and the regulator comes back online. The brain is plastic, it rewires through safe experience, repeated.</p>
+  <div class="good"><strong>The good news: this is reversible.</strong>With repeated somatic practice the amygdala calms, the hippocampus reorganises so the past feels like the past, and the regulator comes back online. The brain is plastic, it rewires through safe experience, repeated.</div>
 
-  <h2><span class="n">2</span>Four states, and how the body speaks them</h2>
-  <p>A healthy nervous system is always moving between activation and rest. There is a middle zone where a person can stay present with themselves, and, under stress, the system can move up into mobilisation or down into shutdown.</p>
+  <h2><span class="n">2.</span> Four states, and how the body speaks them</h2>
+  <p class="sub">A healthy nervous system is always moving between activation and rest. There is a middle zone where a person can stay present with themselves, and, under stress, the system can move up into mobilisation or down into shutdown.</p>
 
-  <div class="state">
-    <h3>Fight / Flight <span>(hyperarousal, up)</span></h3>
+  <div class="state s-up">
+    <h3>Fight / Flight <span>Hyperarousal, up</span></h3>
     <p><span class="label">In the body:</span> Heart racing, fast high/shallow breath, heat in the chest and face, jaw tight, shoulders up, gut clenched, hands gripping, restless legs, cold hands, eyes scanning, wired and exhausted at once. The diaphragm closes down.</p>
     <p><span class="label">In the mind:</span> Racing, jumping between things, everything urgent, black-and-white, "I need to get out of here", rehearsing an argument, scanning what's coming, overplanning.</p>
   </div>
-  <div class="state">
-    <h3>Sustainable zone <span>(window of tolerance)</span></h3>
+  <div class="state s-mid">
+    <h3>Sustainable zone <span>Window of tolerance</span></h3>
     <p><span class="label">In the body:</span> Breath low and easy into the belly, jaw soft, shoulders down, warm hands, feet felt, vision wide enough to take in the room.</p>
     <p><span class="label">In the mind:</span> Thoughts at a speed that can be followed, more than one thing can be true, curiosity and creativity available. Able to stay present even when it is uncomfortable.</p>
   </div>
-  <div class="state">
-    <h3>Freeze <span>(hypoarousal, down)</span></h3>
+  <div class="state s-down">
+    <h3>Freeze <span>Hypoarousal, down</span></h3>
     <p><span class="label">In the body:</span> Heaviness, numbness, cold hands and feet, fog, shallow held breath, no words, tired even after sleep.</p>
     <p><span class="label">In the mind:</span> Slow or empty, "I can't", "what's the point", the smallest decision feels impossible, losing the thread of the day, lack of motivation.</p>
   </div>
@@ -151,71 +188,79 @@
     <figcaption>A nervous system in health moves up and down, and keeps finding its way back to the green zone. The work is not to stay calm, but to notice, and return.</figcaption>
   </figure>
 
-  <h2><span class="n">3</span>Recognise the state and what helps</h2>
-  <p>Naming the state already brings more choice. Below is the first thing to notice, and concrete actions that invite a shift. Small is enough: the work happens in small doses, and different things land for different people, so it is worth trying a few.</p>
+  <h2><span class="n">3.</span> Recognise the state and what helps</h2>
+  <p class="sub">Naming the state already brings more choice. Below is the first thing to notice, and concrete actions that invite a shift. Small is enough: the work happens in small doses, and different things land for different people, so it is worth trying a few.</p>
 
-  <div class="state">
-    <p class="role">If there is: heart speeding, breath high and fast, heat, can't sit still, mind racing, urge to run or snap</p>
-    <h3>The state is likely Fight / Flight</h3>
-    <p>The system is full of energy with nowhere to go, like pressing the accelerator with the handbrake on. First give the charge an outlet, then settle it:</p>
-    <ul>
-      <li><span class="label">Discharge the charge:</span> push firmly against a wall, squeeze and wring a towel, press palms hard together, or push hands down into the thighs. Hold a few seconds, then let go.</li>
-      <li><span class="label">Move it out:</span> stamping the feet, shaking out the arms and hands (possibly also legs and feet), a brisk short walk.</li>
-      <li><span class="label">Then down-regulate:</span> lengthen the exhale so it is longer than the in-breath; the "Vuuu" sound on the out-breath, or candle breathing.</li>
-      <li><span class="label">Ground:</span> press the feet into the floor, feel the chair; let the eyes slowly take in the whole room.</li>
-    </ul>
-  </div>
-  <div class="state">
-    <p class="role">If there is: heavy, numb, foggy, no words, cold, can't get started, want to disappear</p>
-    <h3>The state is likely Freeze / Shutdown</h3>
-    <p>The system has braked too hard. Here we gently invite energy and sensation back. A little activation, never force:</p>
-    <ul>
-      <li><span class="label">Wake the body gently:</span> light tapping over the arms, chest and thighs; a slow shake of hands and shoulders; rub the palms together until warm.</li>
-      <li><span class="label">Orient:</span> look around slowly, naming colours and shapes; turn the head to take in the space.</li>
-      <li><span class="label">Warmth and pressure:</span> press the hands together, then a firm self-hug with "I am here"; a hand on the belly or somewhere on the body where it feels nurturing.</li>
-      <li><span class="label">Small movement:</span> stand up, change position, a few slow steps. Momentum matters more than intensity.</li>
-    </ul>
-  </div>
-  <div class="state">
-    <p class="role">If there is: breath easy, shoulders down, feet felt, curious, able to stay with discomfort</p>
-    <h3>The state is likely the sustainable zone</h3>
-    <p>Nothing to fix. The work here is to notice and reinforce safety:</p>
-    <ul>
-      <li><span class="label">Name it:</span> "this is what safe feels like." Each time, it teaches the amygdala that safety exists.</li>
-      <li><span class="label">Let it register fully:</span> where in the body is the ease? Bring your attention there, let it grow a little.</li>
-      <li>This is the best time to practise, building the capacity to return here under stress.</li>
-    </ul>
+  <div class="table" role="table" aria-label="Recognise the state and what helps">
+    <div class="row head" role="row"><div role="columnheader">If there is…</div><div role="columnheader">The state is likely…</div><div role="columnheader">What helps</div></div>
+    <div class="row r-up" role="row">
+      <div role="cell"><span class="mlabel">If there is</span>Heart speeding, breath high and fast, heat, can't sit still, mind racing, urge to run or snap.</div>
+      <div role="cell" class="cell-state"><span class="mlabel">The state is likely</span>Fight / Flight</div>
+      <div role="cell"><span class="mlabel">What helps</span>The system is full of energy with nowhere to go, like pressing the accelerator with the handbrake on. First give the charge an outlet, then settle it:
+        <ul>
+          <li><span class="label">Discharge the charge:</span> push firmly against a wall, squeeze and wring a towel, press palms hard together, or push hands down into the thighs. Hold a few seconds, then let go.</li>
+          <li><span class="label">Move it out:</span> stamping the feet, shaking out the arms and hands (possibly also legs and feet), a brisk short walk.</li>
+          <li><span class="label">Then down-regulate:</span> lengthen the exhale so it is longer than the in-breath; the "Vuuu" sound on the out-breath, or candle breathing.</li>
+          <li><span class="label">Ground:</span> press the feet into the floor, feel the chair; let the eyes slowly take in the whole room.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row r-down" role="row">
+      <div role="cell"><span class="mlabel">If there is</span>Heavy, numb, foggy, no words, cold, can't get started, want to disappear.</div>
+      <div role="cell" class="cell-state"><span class="mlabel">The state is likely</span>Freeze / Shutdown</div>
+      <div role="cell"><span class="mlabel">What helps</span>The system has braked too hard. Here we gently invite energy and sensation back. A little activation, never force:
+        <ul>
+          <li><span class="label">Wake the body gently:</span> light tapping over the arms, chest and thighs; a slow shake of hands and shoulders; rub the palms together until warm.</li>
+          <li><span class="label">Orient:</span> look around slowly, naming colours and shapes; turn the head to take in the space.</li>
+          <li><span class="label">Warmth and pressure:</span> press the hands together, then a firm self-hug with "I am here"; a hand on the belly or somewhere on the body where it feels nurturing.</li>
+          <li><span class="label">Small movement:</span> stand up, change position, a few slow steps. Momentum matters more than intensity.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row r-mid" role="row">
+      <div role="cell"><span class="mlabel">If there is</span>Breath easy, shoulders down, feet felt, curious, able to stay with discomfort.</div>
+      <div role="cell" class="cell-state"><span class="mlabel">The state is likely</span>Sustainable zone</div>
+      <div role="cell"><span class="mlabel">What helps</span>Nothing to fix. The work here is to notice and reinforce safety:
+        <ul>
+          <li><span class="label">Name it:</span> "this is what safe feels like." Each time, it teaches the amygdala that safety exists.</li>
+          <li><span class="label">Let it register fully:</span> where in the body is the ease? Bring your attention there, let it grow a little.</li>
+          <li>This is the best time to practise, building the capacity to return here under stress.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <h2><span class="n">4</span>Four tools to build safety</h2>
-  <p>Gentle ways to widen the window of tolerance and bring the system back toward the green zone.</p>
+  <h2><span class="n">4.</span> Four tools to build safety</h2>
+  <p class="sub">Gentle ways to widen the window of tolerance and bring the system back toward the green zone.</p>
   <div class="tools">
-    <div><h3>Titration</h3><p>Small, bite-size doses. Not all at once. Stay with something for a short while, then a little longer. Let safety build slowly.</p></div>
-    <div><h3>Self-regulation</h3><p>Breath, sound, touch, movement, awareness. The language the amygdala actually understands, not words.</p></div>
-    <div><h3>Resourcing</h3><p>Ask: what is working right now? What is needed in this moment? Return to a place in the body that feels easier.</p></div>
-    <div><h3>Tracking and listening to sensations</h3><p>Sensation is how the body communicates. Notice it (for example warm, light, heavy, tingling), listen to it, without trying to change it. That is how we read the nervous system state.</p></div>
+    <div class="card"><h3>Titration</h3><p>Small, bite-size doses. Not all at once. Stay with something for a short while, then a little longer. Let safety build slowly.</p></div>
+    <div class="card"><h3>Self-regulation</h3><p>Breath, sound, touch, movement, awareness. The language the amygdala actually understands, not words.</p></div>
+    <div class="card"><h3>Resourcing</h3><p>Ask: what is working right now? What is needed in this moment? Return to a place in the body that feels easier.</p></div>
+    <div class="card"><h3>Tracking and listening to sensations</h3><p>Sensation is how the body communicates. Notice it (for example warm, light, heavy, tingling), listen to it, without trying to change it. That is how we read the nervous system state.</p></div>
   </div>
 
-  <h2><span class="n">5</span>The morning baseline</h2>
-  <p>A short practice, ideally done every day, to give the system a calmer starting point and to learn, from a state of regulation, how to communicate with our bodies. The more regularly you practise it, the easier it will be to access it from a state of stress and activation. You can anchor it to something already habitual, like the first coffee, or the good-night chamomile.</p>
-  <ol class="steps">
-    <li><h3>Orienting</h3><p>Let your eyes move slowly around the room: the colours, the shapes, the objects, even what is behind you. This gently tells your brain, I am here, and I am safe.</p></li>
-    <li><h3>Grounding</h3><p>Feel your feet on the floor and press them down a little. Feel the chair holding you, and let yourself lean into it. Let gravity hold you.</p></li>
-    <li><h3>Conscious breath, hands on belly and chest</h3><p>One hand on your belly, one on your chest. Simply feel your breath without changing it. Then take a few deep breaths with a sigh out.</p></li>
-    <li><h3>Candle breath</h3><p>Breathe in gently through your nose. Breathe out slowly through soft lips, as if blowing out a candle or through a straw. A long exhale is your body's natural calm button.</p></li>
-    <li><h3>VU sound</h3><p>Breathe in, and on the out-breath make a soft "Vuuuu" sound. Feel the vibration with a hand at your throat, your chest, below your ribs, then below your navel. The hum soothes the vagus nerve, your body's calming line.</p></li>
-    <li><h3>Self-holding</h3><p>Wrap your arms around yourself, each hand resting on the opposite arm. Feel the warmth and the weight of your own hands. You can gently sway, or softly stroke your arms. Stay for a few slow breaths, letting yourself feel held. This tells your nervous system: I am here, I am safe, I am not alone.</p></li>
-  </ol>
+  <h2><span class="n">5.</span> The morning baseline</h2>
+  <p class="sub">A short practice, ideally done every day, to give the system a calmer starting point and to learn, from a state of regulation, how to communicate with our bodies. The more regularly you practise it, the easier it will be to access it from a state of stress and activation. You can anchor it to something already habitual, like the first coffee, or the good-night chamomile.</p>
+  <div class="practice">
+    <ol>
+      <li><h3>Orienting</h3><p>Let your eyes move slowly around the room: the colours, the shapes, the objects, even what is behind you. This gently tells your brain, I am here, and I am safe.</p></li>
+      <li><h3>Grounding</h3><p>Feel your feet on the floor and press them down a little. Feel the chair holding you, and let yourself lean into it. Let gravity hold you.</p></li>
+      <li><h3>Conscious breath, hands on belly and chest</h3><p>One hand on your belly, one on your chest. Simply feel your breath without changing it. Then take a few deep breaths with a sigh out.</p></li>
+      <li><h3>Candle breath</h3><p>Breathe in gently through your nose. Breathe out slowly through soft lips, as if blowing out a candle or through a straw. A long exhale is your body's natural calm button.</p></li>
+      <li><h3>VU sound</h3><p>Breathe in, and on the out-breath make a soft "Vuuuu" sound. Feel the vibration with a hand at your throat, your chest, below your ribs, then below your navel. The hum soothes the vagus nerve, your body's calming line.</p></li>
+      <li><h3>Self-holding</h3><p>Wrap your arms around yourself, each hand resting on the opposite arm. Feel the warmth and the weight of your own hands. You can gently sway, or softly stroke your arms. Stay for a few slow breaths, letting yourself feel held. This tells your nervous system: I am here, I am safe, I am not alone.</p></li>
+    </ol>
+  </div>
 
   <div class="end">
-    <h2 style="margin-top:0">Want to go deeper?</h2>
+    <h2>Want to go deeper?</h2>
     <p>These practices work best when they become familiar, and it often helps to learn them with someone. If you would like to explore what your own nervous system is telling you, you can book a free intro call with me.</p>
-    <p style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; margin-top:24px">
-      <a class="btn" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener"><span class="en">Book a free intro call</span><span class="fr">Réserver un appel découverte gratuit</span></a>
+    <div class="cover-actions" style="margin-top: 22px">
+      <a class="btn btn-light" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener"><span class="en">Book a free intro call</span><span class="fr">Réserver un appel découverte gratuit</span></a>
       <a href="Nervous_System_basics.pdf" download><span class="en">Download as PDF</span><span class="fr">Télécharger en PDF</span></a>
-    </p>
-    <p class="disclaimer">This guide is for general education and does not replace medical or psychological care. If you are struggling, please reach out to a doctor or a mental health professional.</p>
+    </div>
   </div>
+  <p class="disclaimer">This guide is for general education and does not replace medical or psychological care. If you are struggling, please reach out to a doctor or a mental health professional.</p>
 </article>
 
 <script>
