@@ -76,7 +76,7 @@
     align-items: center;
     text-align: center;
     position: relative;
-    padding: 80px 28px 60px;
+    padding: 80px 28px 110px;
     overflow: hidden;
   }
 
@@ -117,6 +117,19 @@
     max-width: 460px;
     letter-spacing: 0.015em;
   }
+
+
+  .hero-cta { margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .hero-cta .link-btn { min-width: 280px; }
+  .hero-cta .soft-link {
+    font-size: 0.84rem;
+    letter-spacing: 0.03em;
+    color: var(--violet-soft);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(191,160,106,0.5);
+    padding-bottom: 1px;
+  }
+  .hero-cta .soft-link:hover { color: var(--gold-deep); }
 
   .scroll-hint {
     position: absolute;
@@ -374,6 +387,16 @@
     <h1 class="fr">Revenir à<br><em>soi</em></h1>
     <p class="sub en">Somatic coaching, yoga and nervous system regulation in Lausanne. Working with the body through breath, touch, movement, and sound.</p>
     <p class="sub fr">Coaching somatique, yoga et régulation du système nerveux à Lausanne. Un travail avec le corps, par le souffle, le toucher, le mouvement et le son.</p>
+    <div class="hero-cta">
+      <a class="link-btn btn-primary" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <span class="label en">Book a free intro call</span>
+        <span class="label fr">Réserver un appel découverte gratuit</span>
+        <span class="arrow">&rarr;</span>
+      </a>
+      <a class="soft-link en" href="#begin">or get in touch another way</a>
+      <a class="soft-link fr" href="#begin">ou me contacter autrement</a>
+    </div>
     <span class="scroll-hint en">Scroll</span>
     <span class="scroll-hint fr">Défiler</span>
   </header>
@@ -386,7 +409,7 @@
       <p class="lede en">We've spent so long focusing on what to do, that we've forgotten who we are.</p>
       <p class="lede fr">Nous avons passé tant de temps à nous demander quoi faire que nous avons oublié qui nous sommes.</p>
       <div class="media-grid reverse">
-        <img class="arch-photo" src="embodiment.jpg" alt="Andrea Bacconi in nature, hands resting on her chest" loading="lazy" />
+        <img class="arch-photo" src="embodiment.JPG" alt="Andrea Bacconi in nature, hands resting on her chest" loading="lazy" />
         <div>
       <div class="prose en">
         <p>Reconnecting with the body lets us recover an inner wisdom that the overactive mind so often clouds over. Together we can slow down and listen more deeply.</p>
@@ -437,7 +460,7 @@
       <p class="lede en">A particular attention, for <em>those who want it</em>.</p>
       <p class="lede fr">Une attention particulière, pour <em>celles qui le souhaitent</em>.</p>
       <div class="media-grid">
-        <img class="arch-photo" src="women.jpg" alt="Portrait of Andrea Bacconi with a red scarf" loading="lazy" style="object-position:center 30%;" />
+        <img class="arch-photo" src="women.JPG" alt="Portrait of Andrea Bacconi with a red scarf" loading="lazy" style="object-position:center 30%;" />
         <div>
       <div class="prose en">
         <p>Much of what women carry in the body was never theirs to begin with. Conditioning about how much space to take, what is safe to feel, how the body should look and behave, what desire is allowed to be.</p>
@@ -539,7 +562,7 @@
 
     <div class="wrap"><hr class="divider"></div>
 
-    <section class="wrap connect reveal">
+    <section class="wrap connect reveal" id="begin">
       <span class="eyebrow en">Begin</span>
       <span class="eyebrow fr">Commencer</span>
       <p class="lede en">A first conversation, with <em>no obligation</em>, to feel whether this is for you.</p>
