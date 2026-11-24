@@ -84,6 +84,13 @@
   .guide-box { margin-top: 16px; padding: 18px 20px; border: 1px solid var(--gold); background: var(--bg-deep); }
   .guide-box p { margin: 0 0 8px; font-size: 15px; }
 
+  /* coaching */
+  .coach-body { grid-column: 1 / span 7; }
+  .coach-body p { color: var(--body); margin: 0 0 18px; }
+  .coach-photo { grid-column: 9 / span 4; grid-row: 1 / span 2; align-self: start; }
+  .coach-photo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 25%; }
+  #coaching h2 { grid-column: 1 / span 7; }
+
   /* yoga */
   .yoga-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 40%; }
   .yoga-body { grid-column: 7 / span 6; }
@@ -97,8 +104,8 @@
   .quote figcaption { font-size: 14px; color: var(--muted); }
 
   /* photo strip */
-  .strip { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 24px; padding-bottom: 80px; }
-  .strip img { width: 100%; height: 320px; object-fit: cover; }
+  .strip { display: grid; grid-template-columns: minmax(0, 1fr); padding-bottom: 80px; }
+  .strip img { width: 100%; height: 420px; object-fit: cover; }
   .strip figure { margin: 0; }
 
   /* footer */
@@ -109,7 +116,8 @@
   @media (max-width: 820px) {
     .wrap { padding: 0 22px; }
     .hero { padding-top: 48px; padding-bottom: 64px; }
-    .hero-text, .hero-photo, h2, .side-content, .yoga-body, .yoga-photo { grid-column: 1 / -1; }
+    .hero-text, .hero-photo, h2, .side-content, .yoga-body, .yoga-photo, .coach-body, .coach-photo, #coaching h2 { grid-column: 1 / -1; }
+    .coach-photo { grid-row: auto; max-width: 420px; margin-top: 28px; }
     .hero-photo { margin-top: 40px; max-width: 420px; }
     .yoga-photo { margin-bottom: 28px; max-width: 420px; }
     .offer { grid-template-columns: 40px minmax(0, 1fr); }
@@ -130,6 +138,7 @@
     <nav aria-label="Main">
       <a href="#who" class="en">Who I am</a><a href="#who" class="fr">Qui je suis</a>
       <a href="#offer" class="en">What I offer</a><a href="#offer" class="fr">Ce que je propose</a>
+      <a href="#coaching">Coaching</a>
       <a href="#yoga">Yoga</a>
       <a href="#contact">Contact</a>
       <span class="lang" role="group" aria-label="Language / Langue">
@@ -212,13 +221,8 @@
         <div>
           <h3 class="en">1:1 somatic coaching</h3>
           <h3 class="fr">Coaching somatique individuel</h3>
-          <p class="en">A space without judgement, where all your parts can feel safe to show up. We start by slowing down, connecting to the breath and to the sensations in the body. We learn how to read and regulate your nervous system, to regain control over your life. We learn the language of the body. Through breath, movement, sound and touch, we give a voice to the sensations and to the parts of you that usually get no space. When we make room for them, we can often understand the need they carry underneath, and unlock what has been holding you back. Little by little, you will learn to listen to the messages of your body and build a new relationship with yourself.</p>
-          <p class="fr">Un espace sans jugement, où toutes vos parts peuvent se sentir en sécurité pour se montrer. On commence par ralentir, en se connectant au souffle et aux sensations du corps. On apprend à lire et à réguler votre système nerveux, pour reprendre la main sur votre vie. On apprend le langage du corps. Avec la respiration, le mouvement, le son et le toucher, on donne une voix aux sensations et aux parties de vous auxquelles on ne laisse pas de place d'habitude. Quand on leur accorde de l'espace, on arrive souvent à comprendre le besoin qu'elles portent au fond, et à débloquer ce qui vous retenait. Petit à petit, vous apprendrez à écouter les messages de votre corps et à construire une nouvelle relation avec vous-même.</p>
-          <div class="guide-box">
-            <p class="en">Curious how your nervous system works? I wrote a short free guide on stress, anxiety and how the body finds its way back to calm.</p>
-            <p class="fr">Envie de comprendre comment fonctionne votre système nerveux&nbsp;? J'ai écrit un petit guide gratuit sur le stress, l'anxiété et la façon dont le corps retrouve le calme.</p>
-            <a href="guide.html"><span class="en">Read the guide</span><span class="fr">Lire le guide</span></a>
-          </div>
+          <p class="en">Regular sessions to work with stress, anxiety or feeling stuck, through the body. <a href="#coaching">More about coaching</a></p>
+          <p class="fr">Des séances régulières pour travailler avec le stress, l'anxiété ou le sentiment d'être bloqué, à travers le corps. <a href="#coaching">En savoir plus sur le coaching</a></p>
         </div>
         <span class="meta en">Sessions and packages, in person or online</span>
         <span class="meta fr">Séances et forfaits, en présentiel ou en ligne</span>
@@ -259,6 +263,28 @@
         <span class="meta fr">En ligne et en présentiel</span>
       </div>
 
+    </div>
+  </section>
+
+  <section class="wrap grid block" id="coaching">
+    <h2 class="en">Somatic coaching</h2>
+    <h2 class="fr">Coaching somatique</h2>
+    <div class="coach-body">
+          <p class="en">A space without judgement, where all your parts can feel safe to show up. We start by slowing down, connecting to the breath and to the sensations in the body. We learn how to read and regulate your nervous system, to regain control over your life. We learn the language of the body. Through breath, movement, sound and touch, we give a voice to the sensations and to the parts of you that usually get no space. When we make room for them, we can often understand the need they carry underneath, and unlock what has been holding you back. Little by little, you will learn to listen to the messages of your body and build a new relationship with yourself.</p>
+          <p class="fr">Un espace sans jugement, où toutes vos parts peuvent se sentir en sécurité pour se montrer. On commence par ralentir, en se connectant au souffle et aux sensations du corps. On apprend à lire et à réguler votre système nerveux, pour reprendre la main sur votre vie. On apprend le langage du corps. Avec la respiration, le mouvement, le son et le toucher, on donne une voix aux sensations et aux parties de vous auxquelles on ne laisse pas de place d'habitude. Quand on leur accorde de l'espace, on arrive souvent à comprendre le besoin qu'elles portent au fond, et à débloquer ce qui vous retenait. Petit à petit, vous apprendrez à écouter les messages de votre corps et à construire une nouvelle relation avec vous-même.</p>
+          <div class="guide-box">
+            <p class="en">Curious how your nervous system works? I wrote a short free guide on stress, anxiety and how the body finds its way back to calm.</p>
+            <p class="fr">Envie de comprendre comment fonctionne votre système nerveux&nbsp;? J'ai écrit un petit guide gratuit sur le stress, l'anxiété et la façon dont le corps retrouve le calme.</p>
+            <a href="guide.html"><span class="en">Read the guide</span><span class="fr">Lire le guide</span></a>
+          </div>
+      <div class="actions" style="margin-top: 26px">
+        <a class="btn" href="https://calendly.com/andrea-bacconi1996/30min" target="_blank" rel="noopener"><span class="en">Book a free intro call</span><span class="fr">Réserver un appel découverte gratuit</span></a>
+      </div>
+      <p class="facts en" style="margin-top: 22px">1:1 sessions and packages, in person in Lausanne or online, in English, French or Italian.</p>
+      <p class="facts fr" style="margin-top: 22px">Séances individuelles et forfaits, en présentiel à Lausanne ou en ligne, en français, anglais ou italien.</p>
+    </div>
+    <div class="coach-photo">
+      <img src="women.jpg" alt="Portrait of Andrea with a red scarf" loading="lazy">
     </div>
   </section>
 
@@ -317,11 +343,6 @@
       <img src="circle.jpg" alt="Andrea guiding the closing ceremony of the ALPS Summer School 2026, a circle of people above the lake" loading="lazy">
       <figcaption class="caption en">Closing ceremony, ALPS Summer School 2026</figcaption>
       <figcaption class="caption fr">Cérémonie de clôture, Summer School ALPS 2026</figcaption>
-    </figure>
-    <figure>
-      <img src="women.jpg" alt="Portrait of Andrea with a red scarf" loading="lazy" style="object-position: center 25%">
-      <figcaption class="caption en">Work with women</figcaption>
-      <figcaption class="caption fr">Accompagnement des femmes</figcaption>
     </figure>
   </div>
 
