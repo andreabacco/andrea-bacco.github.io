@@ -73,9 +73,10 @@
   .story p { margin: 0 0 20px; }
   .signature { font-family: 'Caveat', cursive; font-size: 44px; color: var(--gold); line-height: 1.1; margin: 4px 0 0; }
   .creds { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 15px; line-height: 1.6; }
-  .creds p { margin: 0 0 10px; color: var(--muted); }
-  .creds ul { list-style: none; padding: 0; margin: 0; }
-  .creds li { padding: 6px 0; color: var(--ink); }
+  .creds p { margin: 0 0 8px; color: var(--ink); font-weight: 600; font-size: 16px; }
+  .creds ul { list-style: disc; padding-left: 20px; margin: 0; }
+  .creds li::marker { color: var(--gold); }
+  .creds li { padding: 4px 0; color: var(--ink); }
   .creds li span { color: var(--muted); }
   .creds .badge { width: 210px; margin-top: 18px; mix-blend-mode: multiply; }
 
@@ -105,10 +106,14 @@
   .yoga-body p { margin: 0 0 18px; color: var(--body); }
 
   /* quotes */
-  .quote { padding: 0 0 28px; margin: 0 0 28px; border-bottom: 1px solid var(--rule); }
-  .quote:last-child { border-bottom: 0; margin-bottom: 0; }
-  .quote blockquote { margin: 0 0 10px; font-family: var(--serif); font-size: 20px; line-height: 1.6; }
-  .quote figcaption { font-size: 14px; color: var(--muted); }
+  .quote { margin: 0 64px 34px 0; }
+  .quote:nth-child(even) { margin: 0 0 34px 64px; }
+  .quote:last-child { margin-bottom: 0; }
+  .quote blockquote { position: relative; margin: 0 0 16px; padding: 22px 26px; background: #FFFFFF; border: 1px solid var(--rule); border-radius: 20px; font-family: var(--serif); font-size: 19px; line-height: 1.6; }
+  .quote blockquote::after { content: ""; position: absolute; bottom: -9px; left: 34px; width: 16px; height: 16px; background: #FFFFFF; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); transform: rotate(45deg); }
+  .quote:nth-child(even) blockquote::after { left: auto; right: 34px; }
+  .quote figcaption { font-size: 14px; color: var(--muted); padding-left: 26px; }
+  .quote:nth-child(even) figcaption { text-align: right; padding-left: 0; padding-right: 26px; }
 
   /* photo strip */
   .strip { padding-bottom: 80px; }
@@ -148,6 +153,8 @@
     .offer { grid-template-columns: 40px minmax(0, 1fr); }
     .meta { grid-column: 2; text-align: left; padding-top: 0; }
     .strip img { height: 260px; }
+    .quote, .quote:nth-child(even) { margin: 0 0 28px 0; }
+    .quote blockquote { font-size: 17px; padding: 18px 20px; }
     .story { font-size: 18px; }
     h2 { font-size: 30px; }
   }
@@ -181,7 +188,7 @@
   <a href="#offer"><span class="en">What I offer</span><span class="fr">Ce que je propose</span><span class="it">Cosa offro</span></a>
   <a href="#coaching">Coaching</a>
   <a href="#yoga">Yoga</a>
-  <a href="#words"><span class="en">Kind words</span><span class="fr">Ils en parlent</span><span class="it">Dicono di me</span></a>
+  <a href="#words"><span class="en">In their words</span><span class="fr">Avec leurs mots</span><span class="it">Con le loro parole</span></a>
   <a href="#contact"><span class="en">Contact</span><span class="fr">Contact</span><span class="it">Contatti</span></a>
   <span class="lang" role="group" aria-label="Language">
     <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
@@ -241,7 +248,7 @@
       </div>
       <p class="signature">Andrea</p>
       <div class="creds">
-        <p><span class="en">Training</span><span class="fr">Formations</span><span class="it">Formazione</span></p>
+        <p><span class="en">Trainings</span><span class="fr">Formations</span><span class="it">Formazioni</span></p>
         <ul>
           <li><span class="en">InnerLifeSkills Master Coach <span>(ICF-accredited school)</span></span><span class="fr">Master Coach InnerLifeSkills <span>(école accréditée ICF)</span></span><span class="it">Master Coach InnerLifeSkills <span>(scuola accreditata ICF)</span></span></li>
           <li><span class="en">Somatic Educator</span><span class="fr">Éducatrice somatique</span><span class="it">Educatrice somatica</span> <span>(Somatic Institute for Women)</span></li>
@@ -346,7 +353,7 @@
   </section>
 
   <section class="wrap grid block" id="words">
-    <h2><span class="en">Kind words</span><span class="fr">Ils en parlent</span><span class="it">Dicono di me</span></h2>
+    <h2><span class="en">In their words</span><span class="fr">Avec leurs mots</span><span class="it">Con le loro parole</span></h2>
     <div class="side-content">
       <figure class="quote">
         <blockquote class="en">"I have tried yoga many times, but this is the first time it truly reached me. The gentleness of your guidance and your invitations let me relax into not caring about what it looks like, just feeling what was happening inside me. You have a gift."</blockquote>
