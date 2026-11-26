@@ -93,16 +93,17 @@
   #coaching h2 { grid-column: 1 / span 7; }
   .coach-body { grid-column: 1 / span 7; }
   .coach-body p { color: var(--body); margin: 0 0 18px; }
-  .coach-photo { grid-column: 9 / span 4; grid-row: 1 / span 2; align-self: center; }
+  .coach-photo { grid-column: 9 / span 4; grid-row: 1 / span 2; align-self: start; margin-top: 8px; }
   .coach-photo img { aspect-ratio: 3 / 4; object-position: center 30%; }
   .guide-box { margin-top: 16px; padding: 18px 20px; border: 1px solid var(--gold); background: var(--bg-deep); border-radius: 6px; }
   .guide-box p { margin: 0 0 8px; font-size: 15px; }
   .facts { font-size: 14px; color: var(--muted); }
 
   /* yoga */
-  .yoga-photo { grid-column: 1 / span 5; align-self: center; }
-  .yoga-photo img { aspect-ratio: 4 / 5; object-position: center 40%; }
-  .yoga-body { grid-column: 7 / span 6; align-self: center; }
+  #yoga h2 { grid-column: 1 / -1; }
+  .yoga-photo { grid-column: 1 / span 4; align-self: center; }
+  .yoga-photo img { aspect-ratio: 4 / 5; max-height: 58vh; object-position: center 40%; }
+  .yoga-body { grid-column: 6 / span 7; align-self: center; }
   .yoga-body p { margin: 0 0 18px; color: var(--body); }
 
   /* quotes */
